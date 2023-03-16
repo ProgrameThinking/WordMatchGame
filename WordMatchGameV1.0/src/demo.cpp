@@ -2,7 +2,7 @@
  * @Author: SakurakojiSaika
  * @Date: 2023-03-16 16:26:09
  * @LastEditors: SakurakojiSaika
- * @LastEditTime: 2023-03-16 16:33:22
+ * @LastEditTime: 2023-03-16 16:42:33
  * @Description: 
  */
 
@@ -11,6 +11,6 @@ using namespace std;
 
 int main(void)
 {
-    printf("Hello World");
+    printf("Hell World");
     return 0;
 }
