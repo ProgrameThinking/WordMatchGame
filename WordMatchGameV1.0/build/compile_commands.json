@@ -1,7 +1,0 @@
-[
-{
-  "directory": "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV1.0/build/src",
-  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -o CMakeFiles\\main.dir\\demo.cpp.obj -c D:\\Downloads\\exp\\cpp_code\\OOP_project\\WordMatchGameV1.0\\src\\demo.cpp",
-  "file": "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV1.0/src/demo.cpp"
-}
-]
