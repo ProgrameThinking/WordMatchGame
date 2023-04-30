@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:58:34
- * @LastEditTime: 2023-04-30 22:04:51
+ * @LastEditTime: 2023-04-30 22:12:17
  * @Description: Implement local registration and login for the player.
  */
 
@@ -23,6 +23,7 @@ int Player::getPassNum()
     return passNum;
 }
 /*public method*/
+
 /**
  * @param {Player} player
  * @return {Player}
