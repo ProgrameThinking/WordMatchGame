@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5) # CMake install : https://cmake.org/download/
-project(planewar LANGUAGES CXX)
+project(WordMatchGameV1.0 LANGUAGES CXX)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_PREFIX_PATH "d:/QT/5.9/mingw53_32") # Qt Kit Dir
 set(CMAKE_AUTOMOC ON)

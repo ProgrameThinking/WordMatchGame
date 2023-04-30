@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:58:34
- * @LastEditTime: 2023-04-30 22:12:17
+ * @LastEditTime: 2023-04-30 22:28:21
  * @Description: Implement local registration and login for the player.
  */
 
@@ -31,5 +31,5 @@ int Player::getPassNum()
  */
 Player* Player::login(Player player)
 {
-    
+    return nullptr;
 }

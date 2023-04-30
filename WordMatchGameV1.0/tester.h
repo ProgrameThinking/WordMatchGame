@@ -4,14 +4,14 @@
  * @LastEditTime: 2023-04-30 21:54:32
  * @Description: Implement local registration and login for the tester.
  */
-
 #ifndef TESTER_H
 #define TESTER_H
 
 #include "member.h"
 
-class Tester:public Member
+class Tester : public Member
 {
+    Q_OBJECT
     private:
         int quesCreatedNum; //Number of questions created
     public:
@@ -24,4 +24,5 @@ class Tester:public Member
         /*public methods*/
         Tester* login(Tester tester);
 };
-#endif
+
+#endif // TESTER_H

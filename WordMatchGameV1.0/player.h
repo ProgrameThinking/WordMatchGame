@@ -1,17 +1,17 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:58:34
- * @LastEditTime: 2023-04-30 21:27:18
+ * @LastEditTime: 2023-04-30 22:23:43
  * @Description: Implement local registration and login for the player.
  */
-
 #ifndef PLAYER_H
 #define PLAYER_H
 
 #include "member.h"
 
-class Player:public Member
+class Player : public Member
 {
+    Q_OBJECT
     private:
         int passNum; //The number of challenges passed.
     public:
@@ -22,6 +22,7 @@ class Player:public Member
         /*Getter*/
         int getPassNum();
         /*public method*/
-        Player* login(Player player);     
-};  
-#endif
+        Player* login(Player player);       
+};
+
+#endif // PLAYER_H

@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:35:12
- * @LastEditTime: 2023-04-30 21:51:06
+ * @LastEditTime: 2023-04-30 22:23:13
  * @Description: Implement the methods in member.h.
  */
 
@@ -13,7 +13,7 @@ Member::Member()
     
 }
 /*Setter*/
-void Member::setPassword(string password)
+void Member::setPassword(QString password)
 {
     this->password=password;
 }
@@ -21,7 +21,7 @@ void Member::setExp(int exp)
 {
     this->exp=exp;
 }
-void Member::setName(string name)
+void Member::setName(QString name)
 {
     this->name=name;
 }
@@ -30,7 +30,7 @@ void Member::setRank(int rank)
     this->rank=rank;
 }
 /*Getter*/
-string Member::getPassword()
+QString Member::getPassword()
 {
     return password;
 }
@@ -38,7 +38,7 @@ int Member::getExp()
 {
     return exp;
 }
-string Member::getName()
+QString Member::getName()
 {
     return name;
 }

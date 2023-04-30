@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:58:45
- * @LastEditTime: 2023-04-30 21:54:40
+ * @LastEditTime: 2023-04-30 22:27:46
  * @Description: Implement local registration and login for the tester.
  */
 
@@ -30,5 +30,5 @@ int Tester::getQuesCreatedNum()
  */
 Tester* Tester::login(Tester tester)
 {
-    
+    return nullptr;
 }

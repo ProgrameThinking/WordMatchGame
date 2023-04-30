@@ -1,37 +1,37 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:35:06
- * @LastEditTime: 2023-04-30 21:29:09
+ * @LastEditTime: 2023-04-30 22:43:26
  * @Description: The class that need to be inherited by the Player class and Tester class.
  */
-
 #ifndef MEMBER_H
 #define MEMBER_H
 
-#include<string>
-using namespace std;
-
-class Member
+#include <QObject>
+#include <QString>
+class Member : public QObject
 {
+    Q_OBJECT
     protected:
-        string password;    //user's pwd
+        QString password;    //user's pwd
         int exp;            //user's exp
-        string name;        //user's name
+        QString name;        //user's name
         int rank;           //user's rank(need to be calculated)
     public:
         /*constructor*/
         Member();
         /*Setter*/
-        void setPassword(string password);
+        void setPassword(QString password);
         void setExp(int exp);
-        void setName(string name);
+        void setName(QString name);
         void setRank(int rank);
         /*Getter*/
-        string getPassword();
+        QString getPassword();
         int getExp();
-        string getName();
+        QString getName();
         int getRank();
         /*public method*/
         void userRegister(); 
 };
-#endif
+
+#endif // MEMBER_H
