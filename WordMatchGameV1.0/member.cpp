@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:35:12
- * @LastEditTime: 2023-04-30 22:23:13
+ * @LastEditTime: 2023-05-01 19:41:12
  * @Description: Implement the methods in member.h.
  */
 
@@ -17,7 +17,7 @@ void Member::setPassword(QString password)
 {
     this->password=password;
 }
-void Member::setExp(int exp)
+void Member::setExp(double exp)
 {
     this->exp=exp;
 }
@@ -34,7 +34,7 @@ QString Member::getPassword()
 {
     return password;
 }
-int Member::getExp()
+double Member::getExp()
 {
     return exp;
 }

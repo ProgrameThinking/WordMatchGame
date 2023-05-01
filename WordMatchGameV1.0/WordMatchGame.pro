@@ -24,6 +24,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+    dbutil.cpp \
         main.cpp \
         widget.cpp \
     player.cpp \
@@ -31,6 +32,7 @@ SOURCES += \
     tester.cpp
 
 HEADERS += \
+    dbutil.h \
         widget.h \
     player.h \
     member.h \
@@ -38,3 +40,9 @@ HEADERS += \
 
 FORMS += \
         widget.ui
+
+RESOURCES += \
+    pic.qrc
+
+QT += sql
+QT += core gui sql

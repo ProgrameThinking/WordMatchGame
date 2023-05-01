@@ -14,7 +14,7 @@ class Member : public QObject
     Q_OBJECT
     protected:
         QString password;    //user's pwd
-        int exp;            //user's exp
+        double exp;            //user's exp
         QString name;        //user's name
         int rank;           //user's rank(need to be calculated)
     public:
@@ -22,12 +22,12 @@ class Member : public QObject
         Member();
         /*Setter*/
         void setPassword(QString password);
-        void setExp(int exp);
+        void setExp(double exp);
         void setName(QString name);
         void setRank(int rank);
         /*Getter*/
         QString getPassword();
-        int getExp();
+        double getExp();
         QString getName();
         int getRank();
         /*public method*/

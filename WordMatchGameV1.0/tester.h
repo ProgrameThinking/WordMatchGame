@@ -2,7 +2,7 @@
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:58:41
  * @LastEditTime: 2023-04-30 21:54:32
- * @Description: Implement local registration and login for the tester.
+ * @Description: Implement local registration and login for testers.
  */
 #ifndef TESTER_H
 #define TESTER_H

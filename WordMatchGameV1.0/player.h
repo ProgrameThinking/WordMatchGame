@@ -1,8 +1,8 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:58:34
- * @LastEditTime: 2023-04-30 22:23:43
- * @Description: Implement local registration and login for the player.
+ * @LastEditTime: 2023-05-01 10:39:20
+ * @Description: Implement local registration and login for players.
  */
 #ifndef PLAYER_H
 #define PLAYER_H

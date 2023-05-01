@@ -1,0 +1,11 @@
+debug/dbutil.o
+debug/main.o
+debug/widget.o
+debug/player.o
+debug/member.o
+debug/tester.o
+debug/qrc_pic.o
+debug/moc_widget.o
+debug/moc_player.o
+debug/moc_member.o
+debug/moc_tester.o
