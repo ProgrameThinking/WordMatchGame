@@ -45,3 +45,4 @@ RESOURCES += \
     pic.qrc
 
 QT += sql
+QT += core gui sql

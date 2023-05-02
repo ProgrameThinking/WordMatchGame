@@ -6,8 +6,7 @@
  */
 #include "widget.h"
 #include "ui_widget.h"
-#include <string>
-#include <QDebug>
+#include "dbutil.h"
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -15,6 +14,7 @@ Widget::Widget(QWidget *parent) :
 {
     setFixedSize(1080,720);
     ui->setupUi(this);
+    dbUtil* con=new dbUtil();
 }
 
 Widget::~Widget()
