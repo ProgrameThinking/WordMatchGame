@@ -24,7 +24,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+    addwordpage.cpp \
     dbutil.cpp \
+    gamepage.cpp \
         main.cpp \
     playerpage.cpp \
     registration.cpp \
@@ -36,7 +38,9 @@ SOURCES += \
     tester.cpp
 
 HEADERS += \
+    addwordpage.h \
     dbutil.h \
+    gamepage.h \
     playerpage.h \
     registration.h \
     searchpage.h \
@@ -47,6 +51,8 @@ HEADERS += \
     tester.h
 
 FORMS += \
+        addwordpage.ui \
+        gamepage.ui \
         playerpage.ui \
         registration.ui \
         searchpage.ui \

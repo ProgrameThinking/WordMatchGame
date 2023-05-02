@@ -163,7 +163,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="battleButton">
+       <widget class="QPushButton" name="setProblemButton">
         <property name="font">
          <font>
           <family>华文行楷</family>
