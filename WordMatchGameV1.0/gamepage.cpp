@@ -1,7 +1,7 @@
 #include "gamepage.h"
 #include "ui_gamepage.h"
 
-gamePage::gamePage(QWidget *parent) :
+gamePage::gamePage(Player* playery,QWidget *parent) :
     QWidget(parent),
     ui(new Ui::gamePage)
 {
