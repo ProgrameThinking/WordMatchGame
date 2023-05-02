@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:58:34
- * @LastEditTime: 2023-05-01 10:39:20
+ * @LastEditTime: 2023-05-02 14:17:59
  * @Description: Implement local registration and login for players.
  */
 #ifndef PLAYER_H
@@ -17,12 +17,13 @@ class Player : public Member
     public:
         /*constructor*/
         Player();
+        Player(QString username,QString password);
         /*Setter*/
         void setPassNum(int passNum);
         /*Getter*/
         int getPassNum();
         /*public method*/
-        Player* login(Player player);       
+        bool login();       
 };
 
 #endif // PLAYER_H

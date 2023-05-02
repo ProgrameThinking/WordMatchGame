@@ -1,16 +1,22 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:35:12
- * @LastEditTime: 2023-05-01 19:41:12
+ * @LastEditTime: 2023-05-02 13:49:40
  * @Description: Implement the methods in member.h.
  */
 
 #include "member.h"
+#include "dbutil.h"
 
 /*constructor*/
 Member::Member()
 {
     
+}
+Member:: Member(QString name,QString password)
+{
+    this->name=name;
+    this->password=password;
 }
 /*Setter*/
 void Member::setPassword(QString password)
@@ -51,9 +57,31 @@ int Member::getRank()
 
 /**
  * @return {*}
- * @description: carry out user and challenger registration.
+ * @description: carry out player and tester registration.
  */
-void Member::userRegister()
+bool Member::userRegister(QString type)
 {
+    QString sql;
+    dbUtil* dbcon=new dbUtil();
+    QSqlQuery query;
+    /*insert user info to database*/
+    if(type=="出题者")
+    {
+        sql="insert into tester(uname,pwd,exp,ranker,quesCreatedNum) values ('";
+        sql+=name+"','"+password+"',0.0,0,0)";
+    }
+    else if(type=="玩家")
+    {
+        sql="insert into player(uname,pwd,exp,ranker,passNum) values ('";
+        sql+=name+"','"+password+"',0.0,0,0)";
+    }
+    qDebug()<<sql;
+    if(query.exec(sql))
+        return true;
+    else
+    {
+        qDebug() << "Error executing query: " << query.lastError().text();
+        return false;
+    }
     
 }

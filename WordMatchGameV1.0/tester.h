@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:58:41
- * @LastEditTime: 2023-04-30 21:54:32
+ * @LastEditTime: 2023-05-02 14:07:47
  * @Description: Implement local registration and login for testers.
  */
 #ifndef TESTER_H
@@ -17,12 +17,13 @@ class Tester : public Member
     public:
         /*constructor*/
         Tester();
+        Tester(QString username,QString password);
         /*Setter*/
         void setQuesCreatedNum(int quesCreatedNum);
         /*Getter*/
         int getQuesCreatedNum();
         /*public methods*/
-        Tester* login(Tester tester);
+        bool login();
 };
 
 #endif // TESTER_H

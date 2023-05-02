@@ -21,6 +21,7 @@ class Widget : public QWidget
 public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
+    
 
 private:
     Ui::Widget *ui;

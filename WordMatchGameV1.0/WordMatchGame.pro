@@ -26,6 +26,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     dbutil.cpp \
         main.cpp \
+    playerpage.cpp \
+    registration.cpp \
+    searchpage.cpp \
+    testerpage.cpp \
         widget.cpp \
     player.cpp \
     member.cpp \
@@ -33,12 +37,20 @@ SOURCES += \
 
 HEADERS += \
     dbutil.h \
+    playerpage.h \
+    registration.h \
+    searchpage.h \
+    testerpage.h \
         widget.h \
     player.h \
     member.h \
     tester.h
 
 FORMS += \
+        playerpage.ui \
+        registration.ui \
+        searchpage.ui \
+        testerpage.ui \
         widget.ui
 
 RESOURCES += \

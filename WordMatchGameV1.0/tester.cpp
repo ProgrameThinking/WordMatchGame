@@ -1,16 +1,19 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:58:45
- * @LastEditTime: 2023-04-30 22:27:46
+ * @LastEditTime: 2023-05-02 14:32:31
  * @Description: Implement local registration and login for the tester.
  */
 
 #include "tester.h"
+#include "dbUtil.h"
 
 /*constructor*/
-Tester::Tester()
+Tester::Tester(){}
+Tester::Tester(QString username,QString password)
 {
-
+    this->name=username;
+    this->password=password;
 }
 /*Setter*/
 void Tester::setQuesCreatedNum(int quesCreatedNum)
@@ -23,12 +26,28 @@ int Tester::getQuesCreatedNum()
     return quesCreatedNum;
 }
 /*public methods*/
+
 /**
- * @param {Tester} tester
- * @return {Tester}
  * @description: If this tester exists in the database, return a full-info tester; otherwise, return null.
+ * @return {*}
  */
-Tester* Tester::login(Tester tester)
+bool Tester::login()
 {
-    return nullptr;
+    dbUtil* dbcon=new dbUtil();
+    QSqlQuery query;
+    QString sql="select * from tester where uname = '";
+    sql+= name+"' and pwd='"+password+"'";
+    qDebug()<<sql;
+    if(query.exec(sql))
+    {
+        /*get all player infomation*/
+        name=query.value("uname").toString();
+        password=query.value("pwd").toString();
+        exp=query.value("exp").toDouble();
+        rank=query.value("ranker").toInt();
+        quesCreatedNum=query.value("quesCreatedNum").toInt();
+        return true;
+    }
+    else
+        return false;
 }

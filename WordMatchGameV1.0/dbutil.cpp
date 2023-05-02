@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 10:54:43
- * @LastEditTime: 2023-05-02 11:38:58
+ * @LastEditTime: 2023-05-02 11:58:50
  * @Description: 
  */
 
@@ -18,5 +18,4 @@ dbUtil::dbUtil()
         qDebug("database open successfully!\n");
     else
         qDebug("database open failed!\n");
-
 }
