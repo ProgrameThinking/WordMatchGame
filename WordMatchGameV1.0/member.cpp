@@ -1,12 +1,13 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:35:12
- * @LastEditTime: 2023-05-02 13:49:40
+ * @LastEditTime: 2023-05-02 21:29:43
  * @Description: Implement the methods in member.h.
  */
 
 #include "member.h"
 #include "dbutil.h"
+#include <math.h>
 
 /*constructor*/
 Member::Member()
@@ -77,11 +78,41 @@ bool Member::userRegister(QString type)
     }
     qDebug()<<sql;
     if(query.exec(sql))
+    {
+        //dbcon->close();
         return true;
+    }
     else
     {
         qDebug() << "Error executing query: " << query.lastError().text();
+        //dbcon->close();
         return false;
     }
-    
+}
+
+/**
+ * @description: check if upgrade is needed when adding experience.
+ * @param {int} expNum
+ * @return {*}
+ */
+void Member::addExp(int expNum)
+{
+    int upExp=(100+rank*50); //exp required for level up
+    if(expNum+exp<upExp)
+        exp+=expNum;
+    else
+    {
+        exp=exp+expNum-upExp;
+        rank++;
+    }
+}
+
+/**
+ * @description: according word length to calculate exp
+ * @param {int} wordLength
+ * @return {*}
+ */
+int Member::calExp(int wordLength)
+{
+    return (int)((1+log2(wordLength)*10)+0.5);
 }

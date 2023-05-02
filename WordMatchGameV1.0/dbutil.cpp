@@ -19,3 +19,8 @@ dbUtil::dbUtil()
     else
         qDebug("database open failed!");
 }
+
+void dbUtil::close()
+{
+    dbconn.close();
+}

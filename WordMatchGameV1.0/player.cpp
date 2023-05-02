@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:58:34
- * @LastEditTime: 2023-05-02 18:00:46
+ * @LastEditTime: 2023-05-02 20:42:47
  * @Description: Implement local registration and login for the player.
  */
 
@@ -49,8 +49,12 @@ bool Player::login()
         exp=query.value("exp").toDouble();
         rank=query.value("ranker").toInt();
         passNum=query.value("passNum").toInt();
+        //dbcon->close();
         return true;
     }
     else
+    {
+        //dbcon->close();
         return false;
+    }
 }

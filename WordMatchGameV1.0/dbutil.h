@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 10:54:43
- * @LastEditTime: 2023-05-02 13:15:12
+ * @LastEditTime: 2023-05-02 20:41:51
  * @Description: Provide initialize and execute sql methods for database.
  */
 
@@ -24,7 +24,7 @@ class dbUtil : public QObject
     public:
         /*constructor*/
         dbUtil();
-
+        void close();
     private:
         QString hostName="localhost";
         QString dbName="wordMatchGame";

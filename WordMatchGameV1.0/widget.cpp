@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 22:15:50
- * @LastEditTime: 2023-05-02 15:42:59
+ * @LastEditTime: 2023-05-02 20:56:22
  * @Description: main window
  */
 #include "widget.h"
@@ -24,7 +24,7 @@ Widget::Widget(QWidget *parent) :
     connect(ui->registrationButton,&QPushButton::clicked,[this](){
         registration *registrationWidget = new registration();
         registrationWidget->show();
-        this->hide();
+        this->close();
     });
     /*login authentication*/
     connect(ui->loginButton,&QPushButton::clicked,[this](){
@@ -39,8 +39,8 @@ Widget::Widget(QWidget *parent) :
                 /*jump to player page*/
                 playerPage *playerPageWidget = new playerPage();
                 playerPageWidget->show();
-                this->hide();
-                QMessageBox::warning(this, tr("登录成功"), tr("登录成功"));
+                this->close();
+                QMessageBox::information(this, tr("登录成功"), tr("登录成功"));
             }
             else
                 QMessageBox::warning(this, tr("登录失败"), tr("用户名或密码有误"));
@@ -51,15 +51,14 @@ Widget::Widget(QWidget *parent) :
             if(tester->login())
             {
                 /*jump to tester page*/
-                testerPage *testerPageWidge=new testerPage();
+                testerPage *testerPageWidge=new testerPage(tester);
                 testerPageWidge->show();
-                this->hide();
-                QMessageBox::warning(this, tr("登录成功"), tr("登录成功"));
+                this->close();
+                QMessageBox::information(this, tr("登录成功"), tr("登录成功"));
             }
             else
                 QMessageBox::warning(this, tr("登录失败"), tr("用户名或密码有误"));
         }
-
     });
 }
 
