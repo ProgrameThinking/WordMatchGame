@@ -19,17 +19,8 @@ file(GLOB RESOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*.qrc")
 INCLUDE_DIRECTORIES(${CMAKE_BINARY_DIR})
 #读取qt对应的头文件位置
 INCLUDE_DIRECTORIES("D:\\Qt\\5.15.2\\mingw81_64\\include")
+INCLUDE_DIRECTORIES("D:\\Qt\\5.15.2\\mingw81_64\\include\\QtSql")
 
-# 引入mysql库
-#声明头文件路径
-set(INC_DIR "C:\\Program Files\\MySQL\\MySQL Server 8.0\\include")
-#声明链接库路径
-set(LINK_DIR "C:\\Program Files\\MySQL\\MySQL Server 8.0\\lib")
-#引入头文件
-include_directories(${INC_DIR})
-#引入库文件
-link_directories(${LINK_DIR})
-link_libraries(libmysql)
 
 # Specify MSVC UTF-8 encoding   
 add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")
@@ -37,11 +28,10 @@ add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
 
 
 add_executable(${PROJECT_NAME}
-    WIN32 # If you need a terminal for debug, please comment this statement 
+    #WIN32 # If you need a terminal for debug, please comment this statement 
     ${SOURCES} 
     ${HEADERS} 
     ${FORMS} 
     ${RESOURCES}
 ) 
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Widgets) # Qt5 Shared Library
-target_link_libraries(${PROJECT_NAME} PRIVATE libmysql)
