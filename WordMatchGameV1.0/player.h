@@ -16,6 +16,7 @@ class Player : public Member
         int passNum; //The number of challenges passed.
     public:
         /*constructor*/
+        Player(QString username,QString password,int exp,int rank,int passNum);
         Player();
         Player(QString username,QString password);
         /*Setter*/

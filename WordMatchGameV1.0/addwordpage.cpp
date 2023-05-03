@@ -50,7 +50,7 @@ addWordPage::~addWordPage()
 void addWordPage::submitWord()
 {
     QString word=ui->answerEdit->text();
-    int difficuty=(int)((1+(word.length()-3)/4)+0.5);
+    int difficuty=(int)((1+(word.length()-3)/2)+0.5);
     dbUtil* dbcon=new dbUtil();
     QSqlQuery query;
     QString sql="insert into vocabulary (word, difficulty) VALUES ('";

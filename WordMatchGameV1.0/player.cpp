@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:58:34
- * @LastEditTime: 2023-05-02 20:42:47
+ * @LastEditTime: 2023-05-03 20:34:36
  * @Description: Implement local registration and login for the player.
  */
 
@@ -9,6 +9,14 @@
 #include "dbutil.h"
 
 /*constructor*/
+Player::Player(QString username,QString password,int exp,int rank,int passNum)
+{
+    this->name=username;
+    this->password=password;
+    this->exp=exp;
+    this->rank=rank;
+    this->passNum=passNum;
+}
 Player::Player(){}
 Player::Player(QString username,QString password)
 {

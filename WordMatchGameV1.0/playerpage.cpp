@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 15:06:44
- * @LastEditTime: 2023-05-02 22:19:52
+ * @LastEditTime: 2023-05-03 14:45:33
  * @Description: Implement some methods about players
  */
 #include "playerpage.h"
@@ -26,7 +26,6 @@ playerPage::playerPage(Player* playery,QWidget *parent) :
     ui->expNum->setText(QString::number(player.getExp()));
     ui->rankNum->setText(QString::number(player.getRank()));
     ui->passLevel->setText(QString::number(player.getPassNum()));
-    ui->setupUi(this);
 
     /*game start*/
     connect(ui->playButton,&QPushButton::clicked,[this,playery](){

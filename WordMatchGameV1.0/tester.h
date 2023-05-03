@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:58:41
- * @LastEditTime: 2023-05-02 14:07:47
+ * @LastEditTime: 2023-05-03 20:38:07
  * @Description: Implement local registration and login for testers.
  */
 #ifndef TESTER_H
@@ -16,6 +16,7 @@ class Tester : public Member
         int quesCreatedNum; //Number of questions created
     public:
         /*constructor*/
+        Tester(QString username,QString password,int exp,int rank,int quesCreatedNum);
         Tester();
         Tester(QString username,QString password);
         /*Setter*/

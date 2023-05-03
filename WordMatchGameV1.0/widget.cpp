@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 22:15:50
- * @LastEditTime: 2023-05-02 20:56:22
+ * @LastEditTime: 2023-05-03 14:39:38
  * @Description: main window
  */
 #include "widget.h"
@@ -37,7 +37,7 @@ Widget::Widget(QWidget *parent) :
             if(player->login())
             {
                 /*jump to player page*/
-                playerPage *playerPageWidget = new playerPage();
+                playerPage *playerPageWidget = new playerPage(player);
                 playerPageWidget->show();
                 this->close();
                 QMessageBox::information(this, tr("登录成功"), tr("登录成功"));

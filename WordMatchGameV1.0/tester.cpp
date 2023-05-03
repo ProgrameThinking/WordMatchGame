@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:58:45
- * @LastEditTime: 2023-05-02 21:33:16
+ * @LastEditTime: 2023-05-03 20:38:21
  * @Description: Implement local registration and login for the tester.
  */
 
@@ -9,6 +9,14 @@
 #include "dbUtil.h"
 
 /*constructor*/
+Tester::Tester(QString username,QString password,int exp,int rank,int quesCreatedNum)
+{
+    this->name=username;
+    this->password=password;
+    this->exp=exp;
+    this->rank=rank;
+    this->quesCreatedNum=quesCreatedNum;
+}
 Tester::Tester(){}
 Tester::Tester(QString username,QString password)
 {
