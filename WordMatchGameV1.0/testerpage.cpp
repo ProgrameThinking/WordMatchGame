@@ -1,11 +1,12 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 15:32:55
- * @LastEditTime: 2023-05-02 22:04:55
+ * @LastEditTime: 2023-05-04 11:52:58
  * @Description: Implement some methods about tester
  */
 #include "testerpage.h"
 #include "ui_testerpage.h"
+#include "searchpage.h"
 #include "addwordpage.h"
 #include "widget.h"
 
@@ -39,6 +40,13 @@ testerPage::testerPage(Tester* tester,QWidget *parent) :
         widget->show();
         this->close();
     });
+    /*jump to search page*/
+    connect(ui->searchButton,&QPushButton::clicked,[this,tester](){
+        searchPage* searchPageWidget=new searchPage(1,nullptr,tester);
+        searchPageWidget->show();
+        this->close();
+    });
+    
 }
 
 testerPage::~testerPage()

@@ -1,11 +1,12 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 15:06:44
- * @LastEditTime: 2023-05-03 14:45:33
+ * @LastEditTime: 2023-05-04 00:28:52
  * @Description: Implement some methods about players
  */
 #include "playerpage.h"
 #include "ui_playerpage.h"
+#include "searchpage.h"
 #include "gamepage.h"
 #include "widget.h"
 
@@ -37,6 +38,12 @@ playerPage::playerPage(Player* playery,QWidget *parent) :
     connect(ui->exitButton,&QPushButton::clicked,[this](){
         Widget *widget=new Widget();
         widget->show();
+        this->close();
+    });
+    /*jump to search page*/
+    connect(ui->searchButton,&QPushButton::clicked,[this,playery](){
+        searchPage* searchPageWidget=new searchPage(0,playery);
+        searchPageWidget->show();
         this->close();
     });
 }
