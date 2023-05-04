@@ -12,7 +12,7 @@ word entered by the player is exactly the same as the word displayed, including 
 ***
 The requirements for the attributes of the challenger include: the challenger's name, the number of levels that have been passed, the challenger's experience points, and the challenger's level. Other attributes can be added if necessary. The requirements for the attributes of the questioner include: the questioner's name, the number of questions asked by the questioner, and the level. Other attributes can be added as needed.
 
-###Specific functions include:
+### Specific functions include:
 
 * Implement local registration and login for challengers and questioners.
 * The program supports multiple registrations, and only one person can log in at the same time.
