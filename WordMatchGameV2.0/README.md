@@ -1,7 +1,7 @@
 
 # To the people looking through this version:
 
-## Here is the functionality that I have implemented：
+## Here is the functions that I have implemented：
 ***
 The challenger is the game player, and registered and logged-in players can play the word elimination game in the system. The difficulty of each level should increase, which can be reflected in one or more of the following three conditions: 
 * 1. The difficulty of the words can increase or remain the same (i.e. the length of the words becomes longer or remains the same);  
