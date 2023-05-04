@@ -1,5 +1,6 @@
 ***@author:SakurakojiSaika***  
 ***@Version:Qt version:5.15.2  CMakeVersion:3.25***
+***If it's helpful for you, please give me a star***.
 # To the people looking through this project:
 ## Here are the requirements for the word match system.
 ***
