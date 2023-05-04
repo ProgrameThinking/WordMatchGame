@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 19:27:06
- * @LastEditTime: 2023-05-02 21:53:31
+ * @LastEditTime: 2023-05-04 15:54:58
  * @Description: Implement some methods for adding word
  */
 
@@ -77,4 +77,5 @@ void addWordPage::submitWord()
     }
     else
         QMessageBox::warning(this, tr("添加失败"), tr("该单词已存在题库中！"));
+    ui->answerEdit->setText("");
 }

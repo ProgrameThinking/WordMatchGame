@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:35:12
- * @LastEditTime: 2023-05-02 21:29:43
+ * @LastEditTime: 2023-05-04 15:56:48
  * @Description: Implement the methods in member.h.
  */
 
@@ -98,6 +98,7 @@ bool Member::userRegister(QString type)
 void Member::addExp(int expNum)
 {
     int upExp=(100+rank*50); //exp required for level up
+    qDebug()<<expNum+" "+upExp;
     if(expNum+exp<upExp)
         exp+=expNum;
     else

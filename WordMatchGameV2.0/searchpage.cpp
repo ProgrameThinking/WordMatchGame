@@ -66,12 +66,13 @@ void searchPage::setTesterTable()
     //set query model
     QSqlQueryModel *model = new QSqlQueryModel();
     dbUtil* dbcon=new dbUtil();
-    QSqlQuery query("select uname,ranker,quesCreatedNum from tester");
+    QSqlQuery query("select uname,exp,ranker,quesCreatedNum from tester");
     model->setQuery(query);
     ui->tableView->setModel(model);
     model->setHeaderData(0, Qt::Horizontal, tr("用户名"));
-    model->setHeaderData(1, Qt::Horizontal, tr("等级"));
-    model->setHeaderData(2, Qt::Horizontal, tr("出题数"));
+    model->setHeaderData(1, Qt::Horizontal, tr("经验"));
+    model->setHeaderData(2, Qt::Horizontal, tr("等级"));
+    model->setHeaderData(3, Qt::Horizontal, tr("通关数"));
     isPlayer=false;
     ui->tableView->show();
     dbcon->close();
@@ -110,7 +111,7 @@ void searchPage::searchInfo()
     else 
     {
         QSqlQueryModel *model = new QSqlQueryModel();
-        sql+="select uname,ranker,quesCreatedNum from tester where ";
+        sql+="select uname,exp,ranker,quesCreatedNum from tester where ";
         if(sname=="用户名")
             sql+="uname='"+input+"'";
         else if(sname=="等级")
@@ -122,8 +123,9 @@ void searchPage::searchInfo()
         model->setQuery(query);
         ui->tableView->setModel(model);
         model->setHeaderData(0, Qt::Horizontal, tr("用户名"));
-        model->setHeaderData(1, Qt::Horizontal, tr("等级"));
-        model->setHeaderData(2, Qt::Horizontal, tr("出题数"));
+        model->setHeaderData(1, Qt::Horizontal, tr("经验"));
+        model->setHeaderData(2, Qt::Horizontal, tr("等级"));
+        model->setHeaderData(3, Qt::Horizontal, tr("通关数"));
         ui->tableView->show();
     }
     dbcon->close();
@@ -154,14 +156,15 @@ void searchPage::sortByNum()
     else 
     {
         QSqlQueryModel *model = new QSqlQueryModel();
-        sql+="select uname,ranker,quesCreatedNum from tester order by quesCreatedNum desc";
+        sql+="select uname,exp,ranker,quesCreatedNum from tester order by quesCreatedNum desc";
         qDebug()<<sql;
         QSqlQuery query(sql);
         model->setQuery(query);
         ui->tableView->setModel(model);
         model->setHeaderData(0, Qt::Horizontal, tr("用户名"));
-        model->setHeaderData(1, Qt::Horizontal, tr("等级"));
-        model->setHeaderData(2, Qt::Horizontal, tr("出题数"));
+        model->setHeaderData(1, Qt::Horizontal, tr("经验"));
+        model->setHeaderData(2, Qt::Horizontal, tr("等级"));
+        model->setHeaderData(3, Qt::Horizontal, tr("通关数"));
         ui->tableView->show();
     }
     dbcon->close();
@@ -178,7 +181,7 @@ void searchPage::sortByRank()
     if(isPlayer)
     {
         QSqlQueryModel *model = new QSqlQueryModel();
-        sql+="select uname,exp,ranker,passnum from player order by ranker,exp desc";
+        sql+="select uname,exp,ranker,passnum from player order by ranker desc,exp desc";
         qDebug()<<sql;
         QSqlQuery query(sql);
         model->setQuery(query);
@@ -192,14 +195,15 @@ void searchPage::sortByRank()
     else 
     {
         QSqlQueryModel *model = new QSqlQueryModel();
-        sql+="select uname,ranker,quesCreatedNum from tester order by ranker,exp desc";
+        sql+="select uname,exp,ranker,quesCreatedNum from tester order by ranker desc,exp desc";
         qDebug()<<sql;
         QSqlQuery query(sql);
         model->setQuery(query);
         ui->tableView->setModel(model);
         model->setHeaderData(0, Qt::Horizontal, tr("用户名"));
-        model->setHeaderData(1, Qt::Horizontal, tr("等级"));
-        model->setHeaderData(2, Qt::Horizontal, tr("出题数"));
+        model->setHeaderData(1, Qt::Horizontal, tr("经验"));
+        model->setHeaderData(2, Qt::Horizontal, tr("等级"));
+        model->setHeaderData(3, Qt::Horizontal, tr("通关数"));
         ui->tableView->show();
     }
     dbcon->close();

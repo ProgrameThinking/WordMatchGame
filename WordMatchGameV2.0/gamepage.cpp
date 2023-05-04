@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 16:14:41
- * @LastEditTime: 2023-05-03 20:45:18
+ * @LastEditTime: 2023-05-04 16:48:34
  * @Description: In this version,player has a unlimited time to spell word.
  */
 #include "gamepage.h"
@@ -21,6 +21,8 @@ gamePage::gamePage(Player* playery,QWidget *parent) :
     player.setExp(playery->getExp());
     player.setRank(playery->getRank());
     player.setPassNum(playery->getPassNum());
+    pastExp=player.getExp();
+    pastRank=player.getRank();
 
     /*real start code*/
     ui->setupUi(this);
@@ -35,6 +37,8 @@ gamePage::gamePage(Player* playery,QWidget *parent) :
     connect(ui->submitButton,&QPushButton::clicked,this,gamePage::submit);
     connect(ui->exitButton,&QPushButton::clicked,[this](){
         /*jump to player page*/
+        player.setExp(pastExp);
+        player.setRank(pastRank);
         playerPage *playerPageWidget = new playerPage(&player);
         playerPageWidget->show();
         this->close();
@@ -93,8 +97,9 @@ QString gamePage::selectWord()
     /*in this page,new words will not be add.As a result, we can get all word in word bank.*/
     dbUtil* dbcon=new dbUtil();
     QSqlQuery query;
-    QString sql="select * from vocabulary";
+    QString sql="select * from vocabulary where difficulty <=";
     qDebug()<<sql;
+    sql+=QString::number(nowRank);
     query.exec(sql);
     /*get the size of result set*/
     int rowCount = query.size();
@@ -111,7 +116,7 @@ QString gamePage::selectWord()
         return res;
     } 
     else 
-        qDebug() << "Failed to seek the 3rd row";
+        qDebug() << "Failed to seek the row";
 }
 
 /**
@@ -161,16 +166,23 @@ void gamePage::submit()
         {
             finishedWord=0;
             nowRank++;
+            pastExp=player.getExp();
+            pastRank=player.getRank();
         }
         /*start next word*/
         initGame();
     }
-    else//game over, exit this page
+    else//player challenge the same rank again
     {
-        /*jump to player page*/
-        playerPage *playerPageWidget = new playerPage(&player);
-        playerPageWidget->show();
-        this->close();
-        QMessageBox::warning(this, tr("游戏结束"), tr("单词匹配错误!"));
+        QMessageBox::warning(this, tr("答案错误"), tr("重新开始该关卡"));
+        finishedWord=0;
+        player.setExp(pastExp);
+        player.setRank(pastRank);
+        ui->username->setText(player.getName());
+        ui->ranklevel->setText(QString::number(nowRank));
+        ui->expNum->setText(QString::number(player.getExp()));
+        ui->rankNum->setText(QString::number(player.getRank()));
+        ui->passLevel->setText(QString::number(player.getPassNum()));
+        initGame();
     }
 }

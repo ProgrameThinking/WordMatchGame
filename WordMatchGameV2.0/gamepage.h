@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 16:14:41
- * @LastEditTime: 2023-05-03 19:45:04
+ * @LastEditTime: 2023-05-04 16:38:21
  * @Description: 
  */
 #ifndef GAMEPAGE_H
@@ -30,6 +30,8 @@ private:
     int nowRank=1;        //the current level number in the game
     int finishedWord=0;   //the number of words passed at the current level
     QString word;         //answer
+    int pastExp;          //exp when the level is not completed
+    int pastRank;         //rank when the level is not completed
     /*Timer*/
     QTimer* processBarTimer;
     QTimer* memoryTimer;

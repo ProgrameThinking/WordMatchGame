@@ -1,17 +1,15 @@
+
 # To the people looking through this version:
 
 ## Here is the functionality that I have implemented：
 ***
-The requirements for the attributes of the challenger include: the challenger's name, the number of levels that have been passed, the challenger's experience points, and the challenger's level. Other attributes can be added if necessary. The requirements for the attributes of the questioner include: the questioner's name, the number of questions asked by the questioner, and the level. Other attributes can be added as needed.
+The challenger is the game player, and registered and logged-in players can play the word elimination game in the system. The difficulty of each level should increase, which can be reflected in one or more of the following three conditions: 
+* 1. The difficulty of the words can increase or remain the same (i.e. the length of the words becomes longer or remains the same);  
+* 2. The number of rounds increases (i.e. the number of words to be passed increases, for example, in the first three levels, only one word needs to be passed to complete the level, while in later levels, two, three, or even more words need to be passed to complete the level);  
+* 3. The display time of the words becomes shorter (the display time becomes shorter with the increase of levels). \
 
-### Specific functions include:
+The player will gain a certain amount of experience points for each level they pass. The experience points will be determined by the level number and the time spent on passing the level. When the accumulated experience points reach a certain level, the player's level will increase. If the player fails to pass a level, they need to try again.
 
-* Implement local registration and login for challengers and questioners.
-* The program supports multiple registrations, and only one person can log in at the same time.
-* Implement game rules: 
-    - The questioner adds words to the game. 
-    - In each level of the game, the program will display a word according to the difficulty of the level. After a certain period of time, the word will disappear. The player needs to enter the word that was just displayed and disappeared in the corresponding place. If the player enters correctly, the level is passed.
-    - Any role can query all players and testers, and search for corresponding players and testers according to their attributes.
-    - Challengers can be ranked based on the number of levels passed, experience, level, etc., while questioners can be ranked based on the number of questions asked and their level.
+The game comes with a built-in word bank, and registered question setters can add new words to the system, which will expand the word bank. However, existing words cannot be added again (the words in the word bank form a word pool, but it is recommended to organize and store them based on the length of the words. Each time a question is generated, the system randomly selects a word with an appropriate length from the word pool according to the difficulty level of the level). Every time a question is successfully added, the number of questions added by the question setter will be updated. The level of the question setter will be upgraded based on the number of successfully added questions.
 
 Please refer to the code and design report for detailed design.
