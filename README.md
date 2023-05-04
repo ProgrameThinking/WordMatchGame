@@ -1,5 +1,6 @@
 ***@author:SakurakojiSaika***  
-***@Version:Qt version:5.15.2  CMakeVersion:3.25***
+***@Version:Qt version:5.15.2  CMakeVersion:3.25***  
+***If it's helpful for you, please give me a star***.
 # To the people looking through this project:
 ## Here are the requirements for the word match system.
 ***
@@ -12,6 +13,6 @@ word entered by the player is exactly the same as the word displayed, including 
 ### The following are three versions of the code and design reports.
 ***
 * [WordMatchGame V1.0](https://github.com/ProgrameThinking/WordMatchGame/tree/main/WordMatchGameV1.0)
-* WordMatchGame V2.0
+* [WordMatchGame V2.0](https://github.com/ProgrameThinking/WordMatchGame/tree/main/WordMatchGameV2.0)
 * WordMatchGame V3.0
 * design report
