@@ -1,11 +1,6 @@
-<!--
- * @Author: SakurakojiSaika
- * @Date: 2023-05-04 15:00:39
- * @LastEditTime: 2023-05-04 15:05:55
- * @Description: 
--->
+***@author:SakurakojiSaika***  
+***@Version:Qt version:5.15.2  CMakeVersion:3.25***
 # To the people looking through this project:
-
 ## Here are the requirements for the word match system.
 ***
 * The Word Match Game consists of two types of participants: players and testers (who add words to the game). 
