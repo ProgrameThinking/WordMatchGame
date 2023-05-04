@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "WordMatchGameV2.0",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "WordMatchGameV2.0::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WordMatchGameV2.0-Debug-562e6346f992b9e53018.json",
+					"name" : "WordMatchGameV2.0",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WordMatchGameV2.0_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WordMatchGameV2.0_autogen-Debug-1da682456fdecc62874a.json",
+					"name" : "WordMatchGameV2.0_autogen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV2.0/build",
+		"source" : "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV2.0"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
