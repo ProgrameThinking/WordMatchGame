@@ -12,6 +12,6 @@ word entered by the player is exactly the same as the word displayed, including 
 ### The following are three versions of the code and design reports.
 ***
 * [WordMatchGame V1.0](https://github.com/ProgrameThinking/WordMatchGame/tree/main/WordMatchGameV1.0)
-* WordMatchGame V2.0
+* [WordMatchGame V2.0](https://github.com/ProgrameThinking/WordMatchGame/tree/main/WordMatchGameV2.0)
 * WordMatchGame V3.0
 * design report
