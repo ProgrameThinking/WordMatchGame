@@ -1,0 +1,47 @@
+{
+    "qtConfigure.qtKitDir": "D:\\Qt\\5.15.2\\mingw81_64",
+    "files.associations": {
+        "qstatusbar": "cpp",
+        "qmainwindow": "cpp",
+        "qheaderview": "cpp",
+        "qgraphicsview": "cpp",
+        "qobject": "cpp",
+        "qgraphicsitem": "cpp",
+        "new": "cpp",
+        "qgraphicspixmapitem": "cpp",
+        "qstring": "cpp",
+        "qwidget": "cpp",
+        "qsqldatabase": "cpp",
+        "qdebug": "cpp",
+        "qsqlerror": "cpp",
+        "ostream": "cpp",
+        "*.tcc": "cpp",
+        "fstream": "cpp",
+        "qsqlquerymodel": "cpp",
+        "qtime": "cpp",
+        "thread": "cpp",
+        "typeinfo": "cpp",
+        "array": "cpp",
+        "chrono": "cpp",
+        "compare": "cpp",
+        "functional": "cpp",
+        "ratio": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "variant": "cpp",
+        "istream": "cpp"
+    },
+    "fileheader.customMade": {
+        "Author": "SakurakojiSaika", // 改成你的名字
+        "Date": "throttleTime", // 文件创建时间
+        "LastEditTime": "", // 文件最后编辑时间
+        "Description":"",
+    },
+    "fileheader.configObj": {
+        "CheckFileChange": true, // 默认关闭
+        "wideSame": false, // 设置为true开启
+        "wideNum": 13, // 字段长度 默认为13
+        "createHeader": true // 创建文件自动添加注释
+    },
+}

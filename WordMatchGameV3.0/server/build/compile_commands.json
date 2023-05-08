@@ -1,0 +1,12 @@
+[
+{
+  "directory": "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/build",
+  "command": "D:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB @CMakeFiles/WordMatchGameV3.0.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\WordMatchGameV3.0.dir\\WordMatchGameV3.0_autogen\\mocs_compilation.cpp.obj -c D:\\Downloads\\exp\\cpp_code\\OOP_project\\WordMatchGameV3.0\\server\\build\\WordMatchGameV3.0_autogen\\mocs_compilation.cpp",
+  "file": "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/build/WordMatchGameV3.0_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/build",
+  "command": "D:\\Qt\\Tools\\mingw810_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB @CMakeFiles/WordMatchGameV3.0.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\WordMatchGameV3.0.dir\\main.cpp.obj -c D:\\Downloads\\exp\\cpp_code\\OOP_project\\WordMatchGameV3.0\\server\\main.cpp",
+  "file": "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/main.cpp"
+}
+]
