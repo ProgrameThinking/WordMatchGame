@@ -24,8 +24,11 @@ registration::registration(QWidget *parent) :
         QString pwd=ui->pwdText->toPlainText();
         QString type=ui->typeCbx->currentText();
         Member* temp=new Member(username,pwd);
+        /*uname or pwd is empty*/
+        if(username.isEmpty()||pwd.isEmpty())
+            QMessageBox::warning(this,"注册失败","用户名或密码为空!");
         /*sucessful insertion will jump to logging in page*/
-        if(temp->userRegister(type))
+        else if(temp->userRegister(type))
         {
             QMessageBox::information(this, tr("注册成功!"), tr("转入登录后界面!"));
             if(type=="玩家")
