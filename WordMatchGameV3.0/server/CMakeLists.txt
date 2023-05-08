@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt5 COMPONENTS Widgets REQUIRED) # Qt COMPONENTS
 find_package(Qt5 COMPONENTS Sql REQUIRED)
+find_package(Qt5 COMPONENTS Network REQUIRED)
 
 #将所有文件写入不同变量中
 file(GLOB HEADERS "${CMAKE_CURRENT_SOURCE_DIR}/*.h")
@@ -35,4 +36,4 @@ add_executable(${PROJECT_NAME}
     ${FORMS} 
     ${RESOURCES}
 ) 
-target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Widgets Qt5::Sql) # Qt5 Shared Library
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::Widgets Qt5::Sql Qt5::Network) # Qt5 Shared Library

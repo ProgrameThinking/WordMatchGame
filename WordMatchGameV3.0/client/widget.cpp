@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 22:15:50
- * @LastEditTime: 2023-05-03 14:39:38
+ * @LastEditTime: 2023-05-08 20:46:40
  * @Description: main window
  */
 #include "widget.h"
@@ -20,6 +20,12 @@ Widget::Widget(QWidget *parent) :
     setFixedSize(1080,720);
     ui->setupUi(this);
 
+    /*initiate the connection of client and server*/
+    connectServer();
+    //connect successfully
+    connect(this,&Widget::connectOK,this,[=](){
+        QMessageBox::information(this,"连接服务器","已经成功链接服务器，恭喜！");
+    });
     /*jump to registration*/
     connect(ui->registrationButton,&QPushButton::clicked,[this](){
         registration *registrationWidget = new registration();
@@ -65,4 +71,16 @@ Widget::Widget(QWidget *parent) :
 Widget::~Widget()
 {
     delete ui;
+}
+
+void Widget::connectServer()
+{
+    m_tcp=new QTcpSocket;
+    m_tcp->connectToHost(QHostAddress(ip),port);
+    connect(m_tcp,&QTcpSocket::connected,this,&Widget::connectOK);
+    connect(m_tcp,&QTcpSocket::disconnected,this,[=](){
+        m_tcp->close();
+        m_tcp->deleteLater();
+        emit connectOver();
+    });
 }

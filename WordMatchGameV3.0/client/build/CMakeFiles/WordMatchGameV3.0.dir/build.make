@@ -298,6 +298,7 @@ WordMatchGameV3.0.exe: CMakeFiles/WordMatchGameV3.0.dir/widget.cpp.obj
 WordMatchGameV3.0.exe: CMakeFiles/WordMatchGameV3.0.dir/build.make
 WordMatchGameV3.0.exe: D:/Qt/5.15.2/mingw81_64/lib/libQt5Widgets.a
 WordMatchGameV3.0.exe: D:/Qt/5.15.2/mingw81_64/lib/libQt5Sql.a
+WordMatchGameV3.0.exe: D:/Qt/5.15.2/mingw81_64/lib/libQt5Network.a
 WordMatchGameV3.0.exe: D:/Qt/5.15.2/mingw81_64/lib/libQt5Gui.a
 WordMatchGameV3.0.exe: D:/Qt/5.15.2/mingw81_64/lib/libQt5Core.a
 WordMatchGameV3.0.exe: CMakeFiles/WordMatchGameV3.0.dir/linkLibs.rsp

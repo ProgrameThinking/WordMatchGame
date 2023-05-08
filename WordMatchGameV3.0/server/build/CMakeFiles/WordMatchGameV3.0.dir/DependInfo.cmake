@@ -10,6 +10,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/build/WordMatchGameV3.0_autogen/mocs_compilation.cpp" "CMakeFiles/WordMatchGameV3.0.dir/WordMatchGameV3.0_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/WordMatchGameV3.0.dir/WordMatchGameV3.0_autogen/mocs_compilation.cpp.obj.d"
   "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/main.cpp" "CMakeFiles/WordMatchGameV3.0.dir/main.cpp.obj" "gcc" "CMakeFiles/WordMatchGameV3.0.dir/main.cpp.obj.d"
+  "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/mainwindow.cpp" "CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.obj" "gcc" "CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.obj.d"
+  "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/myserver.cpp" "CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.obj" "gcc" "CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.obj.d"
+  "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/mysocket.cpp" "CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.obj" "gcc" "CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.obj.d"
+  "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/mythread.cpp" "CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.obj" "gcc" "CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.obj.d"
   )
 
 # Targets to which this target links.

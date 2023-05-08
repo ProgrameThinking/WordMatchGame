@@ -270,13 +270,37 @@
 		{
 			"isExternal" : true,
 			"path" : "D:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Sql/Qt5Sql_QSQLiteDriverPlugin.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5Config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/build",
-		"source" : "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server"
+		"build" : "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/build",
+		"source" : "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client"
 	},
 	"version" : 
 	{

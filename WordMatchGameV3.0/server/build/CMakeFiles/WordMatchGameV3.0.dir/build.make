@@ -98,25 +98,94 @@ CMakeFiles/WordMatchGameV3.0.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WordMatchGameV3.0.dir/main.cpp.s"
 	D:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\main.cpp -o CMakeFiles\WordMatchGameV3.0.dir\main.cpp.s
 
+CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.obj: CMakeFiles/WordMatchGameV3.0.dir/flags.make
+CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.obj: CMakeFiles/WordMatchGameV3.0.dir/includes_CXX.rsp
+CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.obj: D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/mainwindow.cpp
+CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.obj: CMakeFiles/WordMatchGameV3.0.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.obj"
+	D:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.obj -MF CMakeFiles\WordMatchGameV3.0.dir\mainwindow.cpp.obj.d -o CMakeFiles\WordMatchGameV3.0.dir\mainwindow.cpp.obj -c D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\mainwindow.cpp
+
+CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.i"
+	D:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\mainwindow.cpp > CMakeFiles\WordMatchGameV3.0.dir\mainwindow.cpp.i
+
+CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.s"
+	D:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\mainwindow.cpp -o CMakeFiles\WordMatchGameV3.0.dir\mainwindow.cpp.s
+
+CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.obj: CMakeFiles/WordMatchGameV3.0.dir/flags.make
+CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.obj: CMakeFiles/WordMatchGameV3.0.dir/includes_CXX.rsp
+CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.obj: D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/myserver.cpp
+CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.obj: CMakeFiles/WordMatchGameV3.0.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.obj"
+	D:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.obj -MF CMakeFiles\WordMatchGameV3.0.dir\myserver.cpp.obj.d -o CMakeFiles\WordMatchGameV3.0.dir\myserver.cpp.obj -c D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\myserver.cpp
+
+CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.i"
+	D:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\myserver.cpp > CMakeFiles\WordMatchGameV3.0.dir\myserver.cpp.i
+
+CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.s"
+	D:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\myserver.cpp -o CMakeFiles\WordMatchGameV3.0.dir\myserver.cpp.s
+
+CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.obj: CMakeFiles/WordMatchGameV3.0.dir/flags.make
+CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.obj: CMakeFiles/WordMatchGameV3.0.dir/includes_CXX.rsp
+CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.obj: D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/mysocket.cpp
+CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.obj: CMakeFiles/WordMatchGameV3.0.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.obj"
+	D:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.obj -MF CMakeFiles\WordMatchGameV3.0.dir\mysocket.cpp.obj.d -o CMakeFiles\WordMatchGameV3.0.dir\mysocket.cpp.obj -c D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\mysocket.cpp
+
+CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.i"
+	D:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\mysocket.cpp > CMakeFiles\WordMatchGameV3.0.dir\mysocket.cpp.i
+
+CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.s"
+	D:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\mysocket.cpp -o CMakeFiles\WordMatchGameV3.0.dir\mysocket.cpp.s
+
+CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.obj: CMakeFiles/WordMatchGameV3.0.dir/flags.make
+CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.obj: CMakeFiles/WordMatchGameV3.0.dir/includes_CXX.rsp
+CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.obj: D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/mythread.cpp
+CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.obj: CMakeFiles/WordMatchGameV3.0.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.obj"
+	D:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.obj -MF CMakeFiles\WordMatchGameV3.0.dir\mythread.cpp.obj.d -o CMakeFiles\WordMatchGameV3.0.dir\mythread.cpp.obj -c D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\mythread.cpp
+
+CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.i"
+	D:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\mythread.cpp > CMakeFiles\WordMatchGameV3.0.dir\mythread.cpp.i
+
+CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.s"
+	D:\Qt\Tools\mingw810_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\mythread.cpp -o CMakeFiles\WordMatchGameV3.0.dir\mythread.cpp.s
+
 # Object files for target WordMatchGameV3.0
 WordMatchGameV3_0_OBJECTS = \
 "CMakeFiles/WordMatchGameV3.0.dir/WordMatchGameV3.0_autogen/mocs_compilation.cpp.obj" \
-"CMakeFiles/WordMatchGameV3.0.dir/main.cpp.obj"
+"CMakeFiles/WordMatchGameV3.0.dir/main.cpp.obj" \
+"CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.obj" \
+"CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.obj" \
+"CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.obj" \
+"CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.obj"
 
 # External object files for target WordMatchGameV3.0
 WordMatchGameV3_0_EXTERNAL_OBJECTS =
 
 WordMatchGameV3.0.exe: CMakeFiles/WordMatchGameV3.0.dir/WordMatchGameV3.0_autogen/mocs_compilation.cpp.obj
 WordMatchGameV3.0.exe: CMakeFiles/WordMatchGameV3.0.dir/main.cpp.obj
+WordMatchGameV3.0.exe: CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.obj
+WordMatchGameV3.0.exe: CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.obj
+WordMatchGameV3.0.exe: CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.obj
+WordMatchGameV3.0.exe: CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.obj
 WordMatchGameV3.0.exe: CMakeFiles/WordMatchGameV3.0.dir/build.make
 WordMatchGameV3.0.exe: D:/Qt/5.15.2/mingw81_64/lib/libQt5Widgets.a
 WordMatchGameV3.0.exe: D:/Qt/5.15.2/mingw81_64/lib/libQt5Sql.a
+WordMatchGameV3.0.exe: D:/Qt/5.15.2/mingw81_64/lib/libQt5Network.a
 WordMatchGameV3.0.exe: D:/Qt/5.15.2/mingw81_64/lib/libQt5Gui.a
 WordMatchGameV3.0.exe: D:/Qt/5.15.2/mingw81_64/lib/libQt5Core.a
 WordMatchGameV3.0.exe: CMakeFiles/WordMatchGameV3.0.dir/linkLibs.rsp
 WordMatchGameV3.0.exe: CMakeFiles/WordMatchGameV3.0.dir/objects1
 WordMatchGameV3.0.exe: CMakeFiles/WordMatchGameV3.0.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable WordMatchGameV3.0.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Downloads\exp\cpp_code\OOP_project\WordMatchGameV3.0\server\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable WordMatchGameV3.0.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\WordMatchGameV3.0.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

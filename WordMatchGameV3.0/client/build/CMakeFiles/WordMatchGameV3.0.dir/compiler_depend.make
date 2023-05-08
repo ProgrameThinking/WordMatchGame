@@ -325,7 +325,15 @@ CMakeFiles/WordMatchGameV3.0.dir/WordMatchGameV3.0_autogen/mocs_compilation.cpp.
   WordMatchGameV3.0_autogen/EWIEGA46WW/moc_testerpage.cpp \
   D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/testerpage.h \
   WordMatchGameV3.0_autogen/EWIEGA46WW/moc_widget.cpp \
-  D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/widget.h
+  D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/widget.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QTcpSocket \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtcpsocket.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetworkglobal.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetwork-config.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qabstractsocket.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QHostAddress \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qhostaddress.h
 
 CMakeFiles/WordMatchGameV3.0.dir/addwordpage.cpp.obj: D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/addwordpage.cpp \
   D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/addwordpage.h \
@@ -1542,16 +1550,27 @@ CMakeFiles/WordMatchGameV3.0.dir/main.cpp.obj: D:/Downloads/exp/cpp_code/OOP_pro
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qsizepolicy.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qcursor.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qkeysequence.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QTcpSocket \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtcpsocket.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetworkglobal.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetwork-config.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qabstractsocket.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qmap.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qtextstream.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qlocale.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qvariant.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qset.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QHostAddress \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qhostaddress.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QApplication \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qcoreevent.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qeventloop.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtCore/qlocale.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtCore/qvariant.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtCore/qmap.h
+  D:/Qt/5.15.2/mingw81_64/include/QtGui/qinputmethod.h
 
 CMakeFiles/WordMatchGameV3.0.dir/member.cpp.obj: D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/member.cpp \
   D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/member.h \
@@ -2399,7 +2418,18 @@ CMakeFiles/WordMatchGameV3.0.dir/playerpage.cpp.obj: D:/Downloads/exp/cpp_code/O
   D:/Qt/5.15.2/mingw81_64/include/QtCore/QTimer \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qtimer.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qbasictimer.h \
-  D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/widget.h
+  D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/widget.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QTcpSocket \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtcpsocket.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetworkglobal.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetwork-config.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qabstractsocket.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qtextstream.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qset.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QHostAddress \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qhostaddress.h
 
 CMakeFiles/WordMatchGameV3.0.dir/registration.cpp.obj: D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/registration.cpp \
   D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/registration.h \
@@ -3669,7 +3699,18 @@ CMakeFiles/WordMatchGameV3.0.dir/testerpage.cpp.obj: D:/Downloads/exp/cpp_code/O
   D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/playerpage.h \
   D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/player.h \
   D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/addwordpage.h \
-  D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/widget.h
+  D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/widget.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QTcpSocket \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtcpsocket.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetworkglobal.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetwork-config.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qabstractsocket.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qtextstream.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qset.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QHostAddress \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qhostaddress.h
 
 CMakeFiles/WordMatchGameV3.0.dir/widget.cpp.obj: D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/widget.cpp \
   D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/widget.h \
@@ -3941,10 +3982,23 @@ CMakeFiles/WordMatchGameV3.0.dir/widget.cpp.obj: D:/Downloads/exp/cpp_code/OOP_p
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qsizepolicy.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qcursor.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qkeysequence.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QTcpSocket \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtcpsocket.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetworkglobal.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetwork-config.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qabstractsocket.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qmap.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qtextstream.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qlocale.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qvariant.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qset.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QHostAddress \
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qhostaddress.h \
   WordMatchGameV3.0_autogen/include/ui_widget.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/QVariant \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qvariant.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtCore/qmap.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QApplication \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
@@ -3952,8 +4006,6 @@ CMakeFiles/WordMatchGameV3.0.dir/widget.cpp.obj: D:/Downloads/exp/cpp_code/OOP_p
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qeventloop.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qguiapplication.h \
   D:/Qt/5.15.2/mingw81_64/include/QtGui/qinputmethod.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtCore/qlocale.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtCore/qvariant.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QComboBox \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qcombobox.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qwidget.h \
@@ -4058,6 +4110,8 @@ D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared
 D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cpp_type_traits.h:
 
 D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h:
+
+D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qhostaddress.h:
 
 D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/debug/assertions.h:
 
@@ -4583,6 +4637,8 @@ D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/time.h:
 
 D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/parse_numbers.h:
 
+D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetwork-config.h:
+
 D:/Qt/5.15.2/mingw81_64/include/QtCore/qrect.h:
 
 D:/Qt/5.15.2/mingw81_64/include/QtGui/qpalette.h:
@@ -4665,6 +4721,8 @@ D:/Qt/5.15.2/mingw81_64/include/QtCore/qbasictimer.h:
 
 D:/Qt/5.15.2/mingw81_64/include/QtCore/qtextstream.h:
 
+D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetworkglobal.h:
+
 D:/Qt/5.15.2/mingw81_64/include/QtCore/qlocale.h:
 
 D:/Qt/5.15.2/mingw81_64/include/QtCore/qset.h:
@@ -4700,6 +4758,14 @@ WordMatchGameV3.0_autogen/EWIEGA46WW/moc_tester.cpp:
 WordMatchGameV3.0_autogen/EWIEGA46WW/moc_widget.cpp:
 
 D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/widget.h:
+
+D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QTcpSocket:
+
+D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtcpsocket.h:
+
+D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qabstractsocket.h:
+
+D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QHostAddress:
 
 D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/addwordpage.cpp:
 
