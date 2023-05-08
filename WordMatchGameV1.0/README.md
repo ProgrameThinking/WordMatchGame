@@ -1,6 +1,6 @@
 # To the people looking through this version:
 
-## Here is the functionality that I have implemented：
+## Here is the functions that I have implemented：
 ***
 The requirements for the attributes of the challenger include: the challenger's name, the number of levels that have been passed, the challenger's experience points, and the challenger's level. Other attributes can be added if necessary. The requirements for the attributes of the questioner include: the questioner's name, the number of questions asked by the questioner, and the level. Other attributes can be added as needed.
 
