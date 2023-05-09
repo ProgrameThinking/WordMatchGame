@@ -13,13 +13,15 @@ SOURCES += \
     mainwindow.cpp \
     myserver.cpp \
     mysocket.cpp \
-    mythread.cpp
+    mythread.cpp \
+    dbutil.cpp
 
 HEADERS += \
     mainwindow.h \
     myserver.h \
     mysocket.h \
-    mythread.h
+    mythread.h \
+    dbutil.h
 
 FORMS += \
     mainwindow.ui
