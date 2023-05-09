@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 10:54:43
- * @LastEditTime: 2023-05-09 15:57:03
+ * @LastEditTime: 2023-05-09 22:57:23
  * @Description: Provide initialize and execute sql methods for database.
  */
 
@@ -28,6 +28,10 @@ class dbUtil : public QObject
         /*public method*/
         QString playerLogin(QString uname,QString pwd);
         QString testerLogin(QString uname,QString pwd);
+        void playerLogout(QString uname);
+        void testerLogout(QString uname);
+        bool addWord(QString word,int difficult);
+        void testerInfoUpdate(int exp,int rank,int quesCreatedNum,QString name);
     private:
         QString hostName="localhost";
         QString dbName="wordMatchGame";

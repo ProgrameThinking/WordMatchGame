@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 19:27:06
- * @LastEditTime: 2023-05-02 21:41:30
+ * @LastEditTime: 2023-05-09 22:17:10
  * @Description: define some methods for adding word
  */
 #ifndef ADDWORDPAGE_H
@@ -22,11 +22,14 @@ class addWordPage : public QWidget
 public:
     explicit addWordPage(Tester* testerp,QTcpSocket* m_tcp,QWidget *parent = nullptr);
     ~addWordPage();
-    void submitWord();
 
 private:
     Ui::addWordPage *ui;
+    QTcpSocket* tcp;
     Tester tester;
+    /*private methods*/
+    void sentword();    //send word to server
+    void wordRecv();    //deal with server's message
 };
 
 #endif // ADDWORDPAGE_H

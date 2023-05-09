@@ -4,7 +4,10 @@
         "qtcpserver": "cpp",
         "qmessagebox": "cpp",
         "typeinfo": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "new": "cpp",
+        "qapplication": "cpp",
+        "random": "cpp"
     },
     "fileheader.customMade": {
         "Author": "SakurakojiSaika", // 改成你的名字

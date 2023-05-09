@@ -325,6 +325,7 @@ CMakeFiles/WordMatchGameV3.0.dir/WordMatchGameV3.0_autogen/mocs_compilation.cpp.
   D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/mysocket.h \
   D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QTcpSocket \
   D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtcpsocket.h \
+  D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/dbutil.h \
   WordMatchGameV3.0_autogen/EWIEGA46WW/moc_myserver.cpp \
   D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/myserver.h \
   WordMatchGameV3.0_autogen/EWIEGA46WW/moc_mysocket.cpp \
@@ -899,6 +900,23 @@ CMakeFiles/WordMatchGameV3.0.dir/main.cpp.obj: D:/Downloads/exp/cpp_code/OOP_pro
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qobject.h \
   D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QTcpSocket \
   D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtcpsocket.h \
+  D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/dbutil.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSql \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsql-config.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlDatabase \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqldatabase.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQueryModel \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquerymodel.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qabstractitemmodel.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqldatabase.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQuery \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquery.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/QDebug \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlError \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlerror.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QApplication \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qapplication.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qcoreapplication.h \
@@ -1212,6 +1230,23 @@ CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.obj: D:/Downloads/exp/cpp_code/O
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qobject.h \
   D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QTcpSocket \
   D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtcpsocket.h \
+  D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/dbutil.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSql \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsql-config.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlDatabase \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqldatabase.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQueryModel \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquerymodel.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qabstractitemmodel.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqldatabase.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQuery \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquery.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/QDebug \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlError \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlerror.h \
   WordMatchGameV3.0_autogen/include/ui_mainwindow.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/QVariant \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qvariant.h \
@@ -1530,7 +1565,24 @@ CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.obj: D:/Downloads/exp/cpp_code/OOP
   D:/Qt/5.15.2/mingw81_64/include/QtCore/QObject \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qobject.h \
   D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QTcpSocket \
-  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtcpsocket.h
+  D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtcpsocket.h \
+  D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/dbutil.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSql \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsql-config.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlDatabase \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqldatabase.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQueryModel \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquerymodel.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qabstractitemmodel.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqldatabase.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQuery \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquery.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/QDebug \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlError \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlerror.h
 
 CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.obj: D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/mysocket.cpp \
   D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/mysocket.h \
@@ -1783,6 +1835,23 @@ CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.obj: D:/Downloads/exp/cpp_code/OOP
   D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_base.h \
   D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/shared_ptr_atomic.h \
   D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/auto_ptr.h \
+  D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/dbutil.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSql \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsql-config.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlDatabase \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqldatabase.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQueryModel \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquerymodel.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qabstractitemmodel.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqldatabase.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQuery \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquery.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/QDebug \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlError \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlerror.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QMessageBox \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qmessagebox.h \
   D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -1827,24 +1896,7 @@ CMakeFiles/WordMatchGameV3.0.dir/mysocket.cpp.obj: D:/Downloads/exp/cpp_code/OOP
   D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/std_mutex.h \
   D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/thread \
   D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/condition_variable \
-  D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_futex.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtCore/QDebug \
-  D:/Qt/5.15.2/mingw81_64/include/QtCore/qdebug.h \
-  D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/dbutil.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSql \
-  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsql-config.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlDatabase \
-  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqldatabase.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQueryModel \
-  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquerymodel.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtCore/qabstractitemmodel.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqldatabase.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQuery \
-  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquery.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlError \
-  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlerror.h
+  D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_futex.h
 
 CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.obj: D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/mythread.cpp \
   D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/mythread.h \
@@ -2140,7 +2192,24 @@ CMakeFiles/WordMatchGameV3.0.dir/mythread.cpp.obj: D:/Downloads/exp/cpp_code/OOP
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qlocale.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qvariant.h \
   D:/Qt/5.15.2/mingw81_64/include/QtCore/qset.h \
-  D:/Qt/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h \
+  D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/dbutil.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSql \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsql-config.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlDatabase \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqldatabase.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQueryModel \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquerymodel.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qabstractitemmodel.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqldatabase.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQuery \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquery.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/QDebug \
+  D:/Qt/5.15.2/mingw81_64/include/QtCore/qdebug.h \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlError \
+  D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlerror.h
 
 
 D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/_mingw_print_pop.h:

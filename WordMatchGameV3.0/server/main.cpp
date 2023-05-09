@@ -2,6 +2,7 @@
 #include "mainwindow.h"
 
 #include <QApplication>
+#include "dbutil.h"
 
 QList<MySocket *> mysocketlist;
 QList<QString> gamelist;

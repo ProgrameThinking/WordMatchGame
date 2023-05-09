@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-08 21:59:27
- * @LastEditTime: 2023-05-08 21:59:49
+ * @LastEditTime: 2023-05-09 23:36:48
  * @Description: 
  */
 
@@ -11,6 +11,7 @@
 
 #include <QObject>
 #include <QTcpSocket>
+#include "dbutil.h"
 
 class MySocket : public QTcpSocket
 {

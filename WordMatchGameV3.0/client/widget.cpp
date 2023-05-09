@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 22:15:50
- * @LastEditTime: 2023-05-09 17:52:29
+ * @LastEditTime: 2023-05-09 23:28:55
  * @Description: main window
  */
 #include "widget.h"
@@ -76,7 +76,7 @@ void Widget::connectServer()
 void Widget::playerLogin()
 {
     QString array = m_tcp->readAll();
-    qDebug() << "receive msg:" <<array;
+    qDebug() << "receive player login msg:" <<array;
     QStringList info = array.split(' ');
     if(info.at(0)=="playerLoginBack")
     {
@@ -92,6 +92,7 @@ void Widget::playerLogin()
             playerPageWidget->show();
             this->close();
             QMessageBox::information(this, tr("登录成功"), tr("登录成功"));
+            disconnect(m_tcp, &QTcpSocket::readyRead, this, &Widget::playerLogin);
         }
     }
 }
@@ -99,7 +100,7 @@ void Widget::playerLogin()
 void Widget::testerLogin()
 {
     QString array = m_tcp->readAll();
-    qDebug() << "receive msg:" <<array;
+    qDebug() << "receive tester login msg:" <<array;
     QStringList info = array.split(' ');
     if(info.at(0)=="testerLoginBack")
     {
@@ -115,6 +116,7 @@ void Widget::testerLogin()
             testerPageWidget->show();
             this->close();
             QMessageBox::information(this, tr("登录成功"), tr("登录成功"));
+            disconnect(m_tcp, &QTcpSocket::readyRead, this, &Widget::testerLogin);
         }
     }
 }

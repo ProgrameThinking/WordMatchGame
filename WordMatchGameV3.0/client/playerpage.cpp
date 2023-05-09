@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 15:06:44
- * @LastEditTime: 2023-05-09 17:59:48
+ * @LastEditTime: 2023-05-09 21:02:46
  * @Description: Implement some methods about players
  */
 #include "playerpage.h"
@@ -38,6 +38,8 @@ playerPage::playerPage(Player* playery,QTcpSocket* m_tcp,QWidget *parent) :
     connect(ui->exitButton,&QPushButton::clicked,[this,m_tcp](){
         Widget *widget=new Widget();
         widget->show();
+        QString msg="playerQuit "+player.getName();
+        m_tcp->write(msg.toUtf8().data());
         m_tcp->close();
         m_tcp->deleteLater();
         this->close();

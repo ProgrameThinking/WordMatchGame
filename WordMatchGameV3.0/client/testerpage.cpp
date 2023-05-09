@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 15:32:55
- * @LastEditTime: 2023-05-09 18:00:10
+ * @LastEditTime: 2023-05-09 21:00:04
  * @Description: Implement some methods about tester
  */
 #include "testerpage.h"
@@ -35,8 +35,12 @@ testerPage::testerPage(Tester* tester,QTcpSocket* m_tcp,QWidget *parent) :
         this->close();
     });
     /*jump to login page*/
-    connect(ui->exitButton,&QPushButton::clicked,[this](){
+    connect(ui->exitButton,&QPushButton::clicked,[this,m_tcp](){
         Widget *widget=new Widget();
+        QString msg="testerQuit "+(this->tester).getName();
+        m_tcp->write(msg.toUtf8().data());
+        m_tcp->close();
+        m_tcp->deleteLater();
         widget->show();
         this->close();
     });

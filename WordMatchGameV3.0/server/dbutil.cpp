@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 10:54:43
- * @LastEditTime: 2023-05-09 16:40:51
+ * @LastEditTime: 2023-05-10 00:08:38
  * @Description: 
  */
 
@@ -23,6 +23,7 @@ dbUtil::dbUtil()
 void dbUtil::close()
 {
     dbconn.close();
+    this->deleteLater();
 }
 
 QString dbUtil::playerLogin(QString uname,QString pwd)
@@ -49,10 +50,14 @@ QString dbUtil::playerLogin(QString uname,QString pwd)
         query.bindValue(0, uname);
         query.bindValue(1, pwd);
         query.exec();
+        query.finish();
         return res;
     }
     else
+    {
+        query.finish();
         return "0";
+    }
 }
 QString dbUtil::testerLogin(QString uname,QString pwd)
 {
@@ -78,8 +83,57 @@ QString dbUtil::testerLogin(QString uname,QString pwd)
         query.bindValue(0, uname);
         query.bindValue(1, pwd);
         query.exec();
+        query.finish();
         return res;
     }
     else
+    {
+        query.finish();
         return "0";
+    }
+}
+void dbUtil::playerLogout(QString uname)
+{
+    QSqlQuery query(dbconn);
+    query.prepare("update player set isOnline=0 where uname =?");
+    query.bindValue(0, uname);
+    query.exec();
+    query.finish();
+}
+void dbUtil::testerLogout(QString uname)
+{
+    QSqlQuery query(dbconn);
+    query.prepare("update tester set isOnline=0 where uname =?");
+    query.bindValue(0, uname);
+    query.exec();
+    query.finish();
+}
+bool dbUtil::addWord(QString word,int difficult)
+{
+    QSqlQuery query(dbconn);
+    query.prepare("insert into vocabulary (word, difficulty) values (?,?)");
+    query.bindValue(0, word);
+    query.bindValue(1, difficult);
+    if(query.exec())
+    {
+        query.finish();
+        return true;
+    }
+    else
+    {
+        query.finish();
+        return false;
+    }
+}
+void dbUtil::testerInfoUpdate(int exp,int rank,int quesCreatedNum,QString name)
+{
+    QSqlQuery query(dbconn);
+    /*update tester's info in database*/
+    query.prepare("update tester set exp = ?, ranker = ?, quesCreatedNum = ? where uname = ? ");
+    query.bindValue(0, exp);
+    query.bindValue(1, rank);
+    query.bindValue(2, quesCreatedNum);
+    query.bindValue(3, name);
+    query.exec();
+    query.finish();
 }
