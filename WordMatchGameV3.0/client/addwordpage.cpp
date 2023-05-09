@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 19:27:06
- * @LastEditTime: 2023-05-04 15:54:58
+ * @LastEditTime: 2023-05-09 17:57:48
  * @Description: Implement some methods for adding word
  */
 
@@ -11,7 +11,7 @@
 #include "testerpage.h"
 #include <QMessageBox>
 
-addWordPage::addWordPage(Tester* testerp,QWidget *parent) :
+addWordPage::addWordPage(Tester* testerp,QTcpSocket* m_tcp,QWidget *parent) :
     QWidget(parent),
     ui(new Ui::addWordPage)
 {
@@ -30,9 +30,9 @@ addWordPage::addWordPage(Tester* testerp,QWidget *parent) :
     ui->passLevel->setText(QString::number(tester.getQuesCreatedNum()));
     /*to implement add word method*/
     connect(ui->submitButton,&QPushButton::clicked,this,addWordPage::submitWord);
-    connect(ui->exitButton,&QPushButton::clicked,[this](){
+    connect(ui->exitButton,&QPushButton::clicked,[this,m_tcp](){
         /*jump to tester page*/
-        testerPage *testerPageWidge=new testerPage(&tester);
+        testerPage *testerPageWidge=new testerPage(&tester,m_tcp);
         testerPageWidge->show();
         this->close();
     });

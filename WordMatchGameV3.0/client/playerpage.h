@@ -8,6 +8,7 @@
 #define PLAYERPAGE_H
 
 #include <QWidget>
+#include <QTcpSocket>
 #include "player.h"
 
 namespace Ui {
@@ -19,7 +20,7 @@ class playerPage : public QWidget
     Q_OBJECT
 
 public:
-    explicit playerPage(Player* playery,QWidget *parent = nullptr);
+    explicit playerPage(Player* playery,QTcpSocket* m_tcp,QWidget *parent = nullptr);
     ~playerPage();
 
 private:

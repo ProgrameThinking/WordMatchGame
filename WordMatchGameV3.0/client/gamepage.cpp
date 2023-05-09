@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 16:14:41
- * @LastEditTime: 2023-05-04 16:48:34
+ * @LastEditTime: 2023-05-09 17:57:20
  * @Description: In this version,player has a unlimited time to spell word.
  */
 #include "gamepage.h"
@@ -11,7 +11,7 @@
 #include <QMessageBox>
 #include <QTime>
 
-gamePage::gamePage(Player* playery,QWidget *parent) :
+gamePage::gamePage(Player* playery,QTcpSocket* m_tcp,QWidget *parent) :
     QWidget(parent),
     ui(new Ui::gamePage)
 {
@@ -35,11 +35,11 @@ gamePage::gamePage(Player* playery,QWidget *parent) :
     initGame();
     /*player submit the answer*/
     connect(ui->submitButton,&QPushButton::clicked,this,gamePage::submit);
-    connect(ui->exitButton,&QPushButton::clicked,[this](){
+    connect(ui->exitButton,&QPushButton::clicked,[this,m_tcp](){
         /*jump to player page*/
         player.setExp(pastExp);
         player.setRank(pastRank);
-        playerPage *playerPageWidget = new playerPage(&player);
+        playerPage *playerPageWidget = new playerPage(&player,m_tcp);
         playerPageWidget->show();
         this->close();
     });

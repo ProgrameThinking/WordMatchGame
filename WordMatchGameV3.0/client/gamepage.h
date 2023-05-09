@@ -9,6 +9,7 @@
 
 #include <QWidget>
 #include <QTimer>
+#include <QTcpSocket>
 #include "player.h"
 
 namespace Ui {
@@ -20,7 +21,7 @@ class gamePage : public QWidget
     Q_OBJECT
 
 public:
-    explicit gamePage(Player* playery,QWidget *parent = nullptr);
+    explicit gamePage(Player* playery,QTcpSocket* m_tcp,QWidget *parent = nullptr);
     ~gamePage();
 
 private:

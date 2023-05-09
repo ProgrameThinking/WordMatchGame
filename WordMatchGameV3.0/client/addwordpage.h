@@ -8,6 +8,7 @@
 #define ADDWORDPAGE_H
 
 #include <QWidget>
+#include <QTcpSocket>
 #include "tester.h"
 
 namespace Ui {
@@ -19,7 +20,7 @@ class addWordPage : public QWidget
     Q_OBJECT
 
 public:
-    explicit addWordPage(Tester* testerp,QWidget *parent = nullptr);
+    explicit addWordPage(Tester* testerp,QTcpSocket* m_tcp,QWidget *parent = nullptr);
     ~addWordPage();
     void submitWord();
 

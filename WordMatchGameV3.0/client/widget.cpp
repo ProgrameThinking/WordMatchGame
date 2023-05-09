@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 22:15:50
- * @LastEditTime: 2023-05-09 15:20:24
+ * @LastEditTime: 2023-05-09 17:52:29
  * @Description: main window
  */
 #include "widget.h"
@@ -29,7 +29,7 @@ Widget::Widget(QWidget *parent) :
     });
     /*jump to registration*/
     connect(ui->registrationButton,&QPushButton::clicked,[this](){
-        registration *registrationWidget = new registration();
+        registration *registrationWidget = new registration(m_tcp);
         registrationWidget->show();
         this->close();
     });
@@ -88,7 +88,7 @@ void Widget::playerLogin()
             QString username=ui->unameText->toPlainText();
             QString password=ui->pwdText->toPlainText();
             Player* player=new Player(username,password,info.at(4).toDouble(),info.at(5).toInt(),info.at(6).toInt());
-            playerPage *playerPageWidget = new playerPage(player);
+            playerPage *playerPageWidget = new playerPage(player,m_tcp);
             playerPageWidget->show();
             this->close();
             QMessageBox::information(this, tr("登录成功"), tr("登录成功"));
@@ -111,7 +111,7 @@ void Widget::testerLogin()
             QString username=ui->unameText->toPlainText();
             QString password=ui->pwdText->toPlainText();
             Tester* tester=new Tester(username,password,info.at(4).toDouble(),info.at(5).toInt(),info.at(6).toInt());
-            testerPage *testerPageWidget = new testerPage(tester);
+            testerPage *testerPageWidget = new testerPage(tester,m_tcp);
             testerPageWidget->show();
             this->close();
             QMessageBox::information(this, tr("登录成功"), tr("登录成功"));

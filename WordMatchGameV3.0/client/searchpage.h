@@ -22,7 +22,7 @@ class searchPage : public QWidget
     Q_OBJECT
 
 public:
-    explicit searchPage(int type,Player* player = nullptr ,Tester* tester = nullptr ,QWidget *parent = nullptr);
+    explicit searchPage(int type,QTcpSocket* m_tcp,Player* player = nullptr ,Tester* tester = nullptr ,QWidget *parent = nullptr);
     ~searchPage();
 
 private:

@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 15:32:55
- * @LastEditTime: 2023-05-04 11:52:58
+ * @LastEditTime: 2023-05-09 18:00:10
  * @Description: Implement some methods about tester
  */
 #include "testerpage.h"
@@ -10,7 +10,7 @@
 #include "addwordpage.h"
 #include "widget.h"
 
-testerPage::testerPage(Tester* tester,QWidget *parent) :
+testerPage::testerPage(Tester* tester,QTcpSocket* m_tcp,QWidget *parent) :
     QWidget(parent),
     ui(new Ui::testerPage)
 {
@@ -28,9 +28,9 @@ testerPage::testerPage(Tester* tester,QWidget *parent) :
     ui->rankNum->setText(QString::number(this->tester.getRank()));
     ui->passLevel->setText(QString::number(this->tester.getQuesCreatedNum()));
     /*jump to add word page*/
-    connect(ui->setProblemButton,&QPushButton::clicked,[this,tester]()
+    connect(ui->setProblemButton,&QPushButton::clicked,[this,m_tcp,tester]()
     {
-        addWordPage *addWordPageWidget=new addWordPage(tester);
+        addWordPage *addWordPageWidget=new addWordPage(tester,m_tcp);
         addWordPageWidget->show();
         this->close();
     });
@@ -41,8 +41,8 @@ testerPage::testerPage(Tester* tester,QWidget *parent) :
         this->close();
     });
     /*jump to search page*/
-    connect(ui->searchButton,&QPushButton::clicked,[this,tester](){
-        searchPage* searchPageWidget=new searchPage(1,nullptr,tester);
+    connect(ui->searchButton,&QPushButton::clicked,[this,m_tcp,tester](){
+        searchPage* searchPageWidget=new searchPage(1,m_tcp,nullptr,tester);
         searchPageWidget->show();
         this->close();
     });

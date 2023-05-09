@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 15:06:44
- * @LastEditTime: 2023-05-04 00:28:52
+ * @LastEditTime: 2023-05-09 17:59:48
  * @Description: Implement some methods about players
  */
 #include "playerpage.h"
@@ -10,7 +10,7 @@
 #include "gamepage.h"
 #include "widget.h"
 
-playerPage::playerPage(Player* playery,QWidget *parent) :
+playerPage::playerPage(Player* playery,QTcpSocket* m_tcp,QWidget *parent) :
     QWidget(parent),
     ui(new Ui::playerPage)
 {
@@ -29,20 +29,22 @@ playerPage::playerPage(Player* playery,QWidget *parent) :
     ui->passLevel->setText(QString::number(player.getPassNum()));
 
     /*game start*/
-    connect(ui->playButton,&QPushButton::clicked,[this,playery](){
-        gamePage *gamePageWidget=new gamePage(playery);
+    connect(ui->playButton,&QPushButton::clicked,[this,m_tcp,playery](){
+        gamePage *gamePageWidget=new gamePage(playery,m_tcp);
         gamePageWidget->show();
         this->close();
     });
     /*jump to login page*/
-    connect(ui->exitButton,&QPushButton::clicked,[this](){
+    connect(ui->exitButton,&QPushButton::clicked,[this,m_tcp](){
         Widget *widget=new Widget();
         widget->show();
+        m_tcp->close();
+        m_tcp->deleteLater();
         this->close();
     });
     /*jump to search page*/
-    connect(ui->searchButton,&QPushButton::clicked,[this,playery](){
-        searchPage* searchPageWidget=new searchPage(0,playery);
+    connect(ui->searchButton,&QPushButton::clicked,[this,m_tcp,playery](){
+        searchPage* searchPageWidget=new searchPage(0,m_tcp,playery);
         searchPageWidget->show();
         this->close();
     });

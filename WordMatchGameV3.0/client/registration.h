@@ -2,6 +2,7 @@
 #define REGISTRATION_H
 
 #include <QWidget>
+#include <QTcpSocket>
 
 namespace Ui {
 class registration;
@@ -12,7 +13,7 @@ class registration : public QWidget
     Q_OBJECT
 
 public:
-    explicit registration(QWidget *parent = nullptr);
+    explicit registration(QTcpSocket* m_tcp,QWidget *parent = nullptr);
     ~registration();
 
 private:

@@ -3,7 +3,7 @@
 #include <QSqlQueryModel>
 #include "dbUtil.h"
 
-searchPage::searchPage(int type,Player* player,Tester* tester,QWidget *parent) :
+searchPage::searchPage(int type,QTcpSocket* m_tcp,Player* player,Tester* tester,QWidget *parent) :
     QWidget(parent),
     ui(new Ui::searchPage)
 {
@@ -11,18 +11,18 @@ searchPage::searchPage(int type,Player* player,Tester* tester,QWidget *parent) :
     connect(ui->playerButton,&QPushButton::clicked,this,searchPage::setPlayerTable);
     connect(ui->testerbutton,&QPushButton::clicked,this,searchPage::setTesterTable);
     connect(ui->searchButton,&QPushButton::clicked,this,searchPage::searchInfo);
-    connect(ui->exitButton,&QPushButton::clicked,[this,type,player,tester](){
+    connect(ui->exitButton,&QPushButton::clicked,[this,m_tcp,type,player,tester](){
         if(type==0)
         {
             /*jump to player page*/
-            playerPage *playerPageWidget = new playerPage(player);
+            playerPage *playerPageWidget = new playerPage(player,m_tcp);
             playerPageWidget->show();
             this->close();
         }
         else if(type==1)
         {
             /*jump to tester page*/
-            testerPage *testerPageWidge=new testerPage(tester);
+            testerPage *testerPageWidge=new testerPage(tester,m_tcp);
             testerPageWidge->show();
             this->close();
         }

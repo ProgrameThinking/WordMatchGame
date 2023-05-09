@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 12:10:01
- * @LastEditTime: 2023-05-03 20:35:57
+ * @LastEditTime: 2023-05-09 17:53:34
  * @Description: 
  */
 #include "registration.h"
@@ -11,7 +11,7 @@
 #include "member.h"
 #include <QMessageBox>
 
-registration::registration(QWidget *parent) :
+registration::registration(QTcpSocket* m_tcp,QWidget *parent) :
     QWidget(parent),
     ui(new Ui::registration)
 {
@@ -19,7 +19,7 @@ registration::registration(QWidget *parent) :
     setFixedSize(1080,720);
 
     /*implement registration*/
-    connect(ui->confirmButton,&QPushButton::clicked,[this](){
+    connect(ui->confirmButton,&QPushButton::clicked,[this,m_tcp](){
         QString username=ui->unameText->toPlainText();
         QString pwd=ui->pwdText->toPlainText();
         QString type=ui->typeCbx->currentText();
@@ -35,7 +35,7 @@ registration::registration(QWidget *parent) :
             {
                 /*jump to player page*/
                 Player* player=new Player(username,pwd,0,0,0);
-                playerPage *playerPageWidget = new playerPage(player);
+                playerPage *playerPageWidget = new playerPage(player,m_tcp);
                 playerPageWidget->show();
                 this->close();
             }
@@ -43,7 +43,7 @@ registration::registration(QWidget *parent) :
             {
                 /*jump to tester page*/
                 Tester* tester=new Tester(username,pwd,0,0,0);
-                testerPage *testerPageWidge=new testerPage(tester);
+                testerPage *testerPageWidge=new testerPage(tester,m_tcp);
                 testerPageWidge->show();
                 this->close();
             }
