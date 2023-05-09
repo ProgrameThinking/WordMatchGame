@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:58:34
- * @LastEditTime: 2023-05-02 14:17:59
+ * @LastEditTime: 2023-05-09 12:38:57
  * @Description: Implement local registration and login for players.
  */
 #ifndef PLAYER_H
@@ -24,7 +24,7 @@ class Player : public Member
         /*Getter*/
         int getPassNum();
         /*public method*/
-        bool login();       
+        //bool login();
 };
 
 #endif // PLAYER_H

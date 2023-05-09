@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-08 21:59:27
- * @LastEditTime: 2023-05-08 22:04:54
+ * @LastEditTime: 2023-05-08 22:38:59
  * @Description: 
  */
 #include "mysocket.h"
@@ -19,7 +19,7 @@ MySocket::MySocket(QWidget *parent, qintptr socket) : QTcpSocket(parent)
     this->setSocketDescriptor(socket);    
 
     connect(this, SIGNAL(readyRead()), this, SLOT(on_connected()));
-    qDebug() << QThread::currentThread()<<"socket";
+    qDebug() << QThread::currentThread()<<" socket";
 }
 
 void MySocket::on_connected()

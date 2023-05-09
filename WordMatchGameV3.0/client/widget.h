@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 22:15:50
- * @LastEditTime: 2023-05-08 20:36:55
+ * @LastEditTime: 2023-05-09 14:59:59
  * @Description: 
  */
 
@@ -33,6 +33,8 @@ private:
     QString ip="127.0.0.1";
     unsigned short port=8989;
     void connectServer();
+    void playerLogin();
+    void testerLogin();
 };
 
 #endif // WIDGET_H

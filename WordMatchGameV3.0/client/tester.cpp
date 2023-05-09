@@ -1,12 +1,11 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:58:45
- * @LastEditTime: 2023-05-03 20:38:21
+ * @LastEditTime: 2023-05-09 15:22:14
  * @Description: Implement local registration and login for the tester.
  */
 
 #include "tester.h"
-#include "dbUtil.h"
 
 /*constructor*/
 Tester::Tester(QString username,QString password,int exp,int rank,int quesCreatedNum)
@@ -35,33 +34,33 @@ int Tester::getQuesCreatedNum()
 }
 /*public methods*/
 
-/**
- * @description: If this tester exists in the database, return a full-info tester; otherwise, return null.
- * @return {*}
- */
-bool Tester::login()
-{
-    dbUtil* dbcon=new dbUtil();
-    QSqlQuery query;
-    QString sql="select * from tester where uname ='";
-    sql+= name+"' and pwd='"+password+"'";
-    qDebug()<<sql;
-    query.exec(sql);
-    query.next();
-    if(query.value("uname").toString()!=nullptr)
-    {
-        /*get all player infomation*/
-        name=query.value("uname").toString();
-        password=query.value("pwd").toString();
-        exp=query.value("exp").toDouble();
-        rank=query.value("ranker").toInt();
-        quesCreatedNum=query.value("quesCreatedNum").toInt();
-        //dbcon->close();
-        return true;
-    }
-    else
-    {
-        //dbcon->close();
-        return false;
-    }
-}
+// /**
+//  * @description: If this tester exists in the database, return a full-info tester; otherwise, return null.
+//  * @return {*}
+//  */
+// bool Tester::login()
+// {
+//     dbUtil* dbcon=new dbUtil();
+//     QSqlQuery query;
+//     QString sql="select * from tester where uname ='";
+//     sql+= name+"' and pwd='"+password+"'";
+//     qDebug()<<sql;
+//     query.exec(sql);
+//     query.next();
+//     if(query.value("uname").toString()!=nullptr)
+//     {
+//         /*get all player infomation*/
+//         name=query.value("uname").toString();
+//         password=query.value("pwd").toString();
+//         exp=query.value("exp").toDouble();
+//         rank=query.value("ranker").toInt();
+//         quesCreatedNum=query.value("quesCreatedNum").toInt();
+//         //dbcon->close();
+//         return true;
+//     }
+//     else
+//     {
+//         //dbcon->close();
+//         return false;
+//     }
+// }

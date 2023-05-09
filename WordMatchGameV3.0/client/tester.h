@@ -24,7 +24,7 @@ class Tester : public Member
         /*Getter*/
         int getQuesCreatedNum();
         /*public methods*/
-        bool login();
+        //bool login();
 };
 
 #endif // TESTER_H
