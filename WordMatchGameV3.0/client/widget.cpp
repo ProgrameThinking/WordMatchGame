@@ -81,13 +81,13 @@ void Widget::playerLogin()
     if(info.at(0)=="playerLoginBack")
     {
         if(info.at(1)=="0")         
-            QMessageBox::warning(this, tr("登录失败"), tr("用户名或密码有误"));
+            QMessageBox::warning(this, tr("登录失败"), tr("用户名或密码有误或用户已登录"));
         else if(info.at(1)=="1")    //username and pwd are correct
         {
             /*jump to player page*/
             QString username=ui->unameText->toPlainText();
             QString password=ui->pwdText->toPlainText();
-            Player* player=new Player(username,password,info.at(4).toInt(),info.at(5).toInt(),info.at(6).toInt());
+            Player* player=new Player(username,password,info.at(4).toDouble(),info.at(5).toInt(),info.at(6).toInt());
             playerPage *playerPageWidget = new playerPage(player);
             playerPageWidget->show();
             this->close();
@@ -104,13 +104,13 @@ void Widget::testerLogin()
     if(info.at(0)=="testerLoginBack")
     {
         if(info.at(1)=="0")         
-            QMessageBox::warning(this, tr("登录失败"), tr("用户名或密码有误"));
+            QMessageBox::warning(this, tr("登录失败"), tr("用户名或密码有误或用户已登录"));
         else if(info.at(1)=="1")    //username and pwd are correct
         {
             /*jump to player page*/
             QString username=ui->unameText->toPlainText();
             QString password=ui->pwdText->toPlainText();
-            Tester* tester=new Tester(username,password,info.at(4).toInt(),info.at(5).toInt(),info.at(6).toInt());
+            Tester* tester=new Tester(username,password,info.at(4).toDouble(),info.at(5).toInt(),info.at(6).toInt());
             testerPage *testerPageWidget = new testerPage(tester);
             testerPageWidget->show();
             this->close();

@@ -82,6 +82,12 @@
 	"HEADERS" : 
 	[
 		[
+			"D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/dbutil.h",
+			"MU",
+			"EWIEGA46WW/moc_dbutil.cpp",
+			null
+		],
+		[
 			"D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -168,6 +174,11 @@
 	"SETTINGS_FILE" : "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/build/CMakeFiles/WordMatchGameV3.0_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/dbutil.cpp",
+			"MU",
+			null
+		],
 		[
 			"D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/main.cpp",
 			"MU",

@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/build/WordMatchGameV3.0_autogen/mocs_compilation.cpp" "CMakeFiles/WordMatchGameV3.0.dir/WordMatchGameV3.0_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/WordMatchGameV3.0.dir/WordMatchGameV3.0_autogen/mocs_compilation.cpp.obj.d"
+  "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/dbutil.cpp" "CMakeFiles/WordMatchGameV3.0.dir/dbutil.cpp.obj" "gcc" "CMakeFiles/WordMatchGameV3.0.dir/dbutil.cpp.obj.d"
   "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/main.cpp" "CMakeFiles/WordMatchGameV3.0.dir/main.cpp.obj" "gcc" "CMakeFiles/WordMatchGameV3.0.dir/main.cpp.obj.d"
   "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/mainwindow.cpp" "CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.obj" "gcc" "CMakeFiles/WordMatchGameV3.0.dir/mainwindow.cpp.obj.d"
   "D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/server/myserver.cpp" "CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.obj" "gcc" "CMakeFiles/WordMatchGameV3.0.dir/myserver.cpp.obj.d"

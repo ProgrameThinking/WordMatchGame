@@ -11,8 +11,8 @@
 
 #include <QThread>
 #include <QWidget>
+#include "mysocket.h"
 
-class MySocket;
 class MyThread : public QThread
 {
     Q_OBJECT

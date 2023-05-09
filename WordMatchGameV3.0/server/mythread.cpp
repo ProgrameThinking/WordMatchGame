@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-08 21:56:51
- * @LastEditTime: 2023-05-08 21:58:46
+ * @LastEditTime: 2023-05-09 15:28:04
  * @Description: 
  */
 
@@ -13,7 +13,7 @@ MyThread::MyThread(QWidget *parent, qintptr socket) : QThread(parent)
     qRegisterMetaType<qintptr>("qintptr");
     this->p = socket;//指定标识符
     connect(this, SIGNAL(finished()),this,SLOT(deleteLater()));
-    qDebug() << QThread::currentThread()<<"main_thread";
+    qDebug() << "sub_thread:"<<QThread::currentThread();
 }
 
 MyThread::~MyThread()
