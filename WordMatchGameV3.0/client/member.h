@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:35:06
- * @LastEditTime: 2023-05-02 21:29:53
+ * @LastEditTime: 2023-05-10 23:27:06
  * @Description: The class that need to be inherited by the Player class and Tester class.
  */
 #ifndef MEMBER_H
@@ -32,7 +32,6 @@ class Member : public QObject
         QString getName();
         int getRank();
         /*public method*/
-        bool userRegister(QString type); 
         void addExp(int expNum);
         int calExp(int wordLength);
 };

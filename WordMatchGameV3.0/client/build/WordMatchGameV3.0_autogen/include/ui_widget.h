@@ -147,9 +147,9 @@ public:
         typeCbx->setObjectName(QString::fromUtf8("typeCbx"));
         typeCbx->setGeometry(QRect(340, 430, 511, 40));
         typeCbx->setFont(font1);
-        layoutWidget1->raise();
-        layoutWidget1->raise();
-        layoutWidget1->raise();
+        layoutWidget->raise();
+        layoutWidget->raise();
+        layoutWidget->raise();
         label->raise();
         label_4->raise();
         typeCbx->raise();

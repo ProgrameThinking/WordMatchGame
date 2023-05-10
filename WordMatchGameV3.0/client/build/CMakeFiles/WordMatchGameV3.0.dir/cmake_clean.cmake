@@ -3,8 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/WordMatchGameV3.0.dir/WordMatchGameV3.0_autogen/mocs_compilation.cpp.obj.d"
   "CMakeFiles/WordMatchGameV3.0.dir/addwordpage.cpp.obj"
   "CMakeFiles/WordMatchGameV3.0.dir/addwordpage.cpp.obj.d"
-  "CMakeFiles/WordMatchGameV3.0.dir/dbutil.cpp.obj"
-  "CMakeFiles/WordMatchGameV3.0.dir/dbutil.cpp.obj.d"
   "CMakeFiles/WordMatchGameV3.0.dir/gamepage.cpp.obj"
   "CMakeFiles/WordMatchGameV3.0.dir/gamepage.cpp.obj.d"
   "CMakeFiles/WordMatchGameV3.0.dir/main.cpp.obj"

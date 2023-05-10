@@ -189,30 +189,6 @@ addwordpage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\WordMatchGameV3.0.dir\build.make CMakeFiles/WordMatchGameV3.0.dir/addwordpage.cpp.s
 .PHONY : addwordpage.cpp.s
 
-dbutil.obj: dbutil.cpp.obj
-.PHONY : dbutil.obj
-
-# target to build an object file
-dbutil.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\WordMatchGameV3.0.dir\build.make CMakeFiles/WordMatchGameV3.0.dir/dbutil.cpp.obj
-.PHONY : dbutil.cpp.obj
-
-dbutil.i: dbutil.cpp.i
-.PHONY : dbutil.i
-
-# target to preprocess a source file
-dbutil.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\WordMatchGameV3.0.dir\build.make CMakeFiles/WordMatchGameV3.0.dir/dbutil.cpp.i
-.PHONY : dbutil.cpp.i
-
-dbutil.s: dbutil.cpp.s
-.PHONY : dbutil.s
-
-# target to generate assembly for a file
-dbutil.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\WordMatchGameV3.0.dir\build.make CMakeFiles/WordMatchGameV3.0.dir/dbutil.cpp.s
-.PHONY : dbutil.cpp.s
-
 gamepage.obj: gamepage.cpp.obj
 .PHONY : gamepage.obj
 
@@ -469,9 +445,6 @@ help:
 	@echo ... addwordpage.obj
 	@echo ... addwordpage.i
 	@echo ... addwordpage.s
-	@echo ... dbutil.obj
-	@echo ... dbutil.i
-	@echo ... dbutil.s
 	@echo ... gamepage.obj
 	@echo ... gamepage.i
 	@echo ... gamepage.s

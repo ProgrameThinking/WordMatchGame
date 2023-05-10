@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 16:14:41
- * @LastEditTime: 2023-05-04 16:38:21
+ * @LastEditTime: 2023-05-10 22:32:14
  * @Description: 
  */
 #ifndef GAMEPAGE_H
@@ -33,14 +33,17 @@ private:
     QString word;         //answer
     int pastExp;          //exp when the level is not completed
     int pastRank;         //rank when the level is not completed
+    QTcpSocket* tcp;
     /*Timer*/
     QTimer* processBarTimer;
     QTimer* memoryTimer;
+    
     /*private methods*/
     void initGame();
     QString selectWord();
     int rankNum();
     void submit();
+    void gameStart();
 };
 
 #endif // GAMEPAGE_H

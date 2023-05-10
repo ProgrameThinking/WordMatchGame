@@ -8,7 +8,17 @@
         "new": "cpp",
         "*.tcc": "cpp",
         "fstream": "cpp",
-        "qtcpsocket": "cpp"
+        "qtcpsocket": "cpp",
+        "chrono": "cpp",
+        "compare": "cpp",
+        "functional": "cpp",
+        "ratio": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "variant": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp"
     },
     "fileheader.customMade": {
         "Author": "SakurakojiSaika", // 改成你的名字

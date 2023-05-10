@@ -7,7 +7,6 @@
 
 #include "addwordpage.h"
 #include "ui_addwordpage.h"
-#include "dbUtil.h"
 #include "testerpage.h"
 #include <QMessageBox>
 

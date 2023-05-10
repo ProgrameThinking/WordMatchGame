@@ -1,13 +1,12 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-08 19:47:23
- * @LastEditTime: 2023-05-10 21:48:58
+ * @LastEditTime: 2023-05-10 23:25:08
  * @Description: player and tester will search all infomation in this page
  */
 #include "searchpage.h"
 #include "ui_searchpage.h"
 #include <QSqlQueryModel>
-#include "dbUtil.h"
 
 searchPage::searchPage(int type,QTcpSocket* m_tcp,Player* player,Tester* tester,QWidget *parent) :
     QWidget(parent),

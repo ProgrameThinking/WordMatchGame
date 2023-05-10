@@ -18,6 +18,9 @@ public:
 
 private:
     Ui::registration *ui;
+    QTcpSocket* tcp;
+    void userRegister();
+    void transPage();
 };
 
 #endif // REGISTRATION_H

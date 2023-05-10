@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-08 21:59:27
- * @LastEditTime: 2023-05-10 20:25:18
+ * @LastEditTime: 2023-05-11 00:00:55
  * @Description: 
  */
 #include "mysocket.h"
@@ -58,6 +58,22 @@ void MySocket::slot_update(QString msg, qintptr descriptor)
     {
         QString s="testerLoginBack ";
         s+=dbcon->testerLogin(info.at(1),info.at(2));
+        qDebug()<<"send tester login msg:"<<s;
+        this->write(s.toUtf8().data());
+    }
+    /*cope with player registe*/
+    else if(info.at(0)=="playerRegistation")
+    {
+        QString s="playerRegistationRecv ";
+        s+=dbcon->playerRegiste(info.at(1),info.at(2));
+        qDebug()<<"send tester login msg:"<<s;
+        this->write(s.toUtf8().data());
+    }
+    /*cope with tester registe*/
+    else if(info.at(0)=="testerRegistation")
+    {
+        QString s="testerRegistationRecv ";
+        s+=dbcon->testerRegiste(info.at(1),info.at(2));
         qDebug()<<"send tester login msg:"<<s;
         this->write(s.toUtf8().data());
     }
@@ -158,9 +174,19 @@ void MySocket::slot_update(QString msg, qintptr descriptor)
         this->write(s.toUtf8().data());
     }
     /*finish coping with search page*/
+    else if(info.at(0)=="singalGameWord")
+    {
+        QString s="singalGameWordRecv ";
+        s+=dbcon->getSignalGameWord(info.at(1).toInt());
+        qDebug()<<"send singalGameWord msg:"<<s;
+        this->write(s.toUtf8().data());
+    }
     /*cope with tester info's update*/
     else if(info.at(0)=="testerUpdate")
         dbcon->testerInfoUpdate(info.at(2).toInt(),info.at(3).toInt(),info.at(4).toInt(),info.at(1));
+    /*cope with player info's update*/
+    else if(info.at(0)=="playerUpdate")
+        dbcon->playerInfoUpdate(info.at(2).toInt(),info.at(3).toInt(),info.at(4).toInt(),info.at(1));
     /*cope with player logout*/
     else if(info.at(0)=="playerQuit")
         dbcon->playerLogout(info.at(1));

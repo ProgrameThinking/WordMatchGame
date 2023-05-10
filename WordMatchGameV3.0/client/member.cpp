@@ -1,13 +1,13 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-04-30 20:35:12
- * @LastEditTime: 2023-05-04 15:56:48
+ * @LastEditTime: 2023-05-10 23:26:35
  * @Description: Implement the methods in member.h.
  */
 
 #include "member.h"
-#include "dbutil.h"
 #include <math.h>
+#include <QDebug>
 
 /*constructor*/
 Member::Member()
@@ -52,42 +52,6 @@ QString Member::getName()
 int Member::getRank()
 {
     return rank;
-}
-
-/*need to be completed*/
-
-/**
- * @return {*}
- * @description: carry out player and tester registration.
- */
-bool Member::userRegister(QString type)
-{
-    QString sql;
-    dbUtil* dbcon=new dbUtil();
-    QSqlQuery query;
-    /*insert user info to database*/
-    if(type=="出题者")
-    {
-        sql="insert into tester(uname,pwd,exp,ranker,quesCreatedNum) values ('";
-        sql+=name+"','"+password+"',0.0,0,0)";
-    }
-    else if(type=="玩家")
-    {
-        sql="insert into player(uname,pwd,exp,ranker,passNum) values ('";
-        sql+=name+"','"+password+"',0.0,0,0)";
-    }
-    qDebug()<<sql;
-    if(query.exec(sql))
-    {
-        //dbcon->close();
-        return true;
-    }
-    else
-    {
-        qDebug() << "Error executing query: " << query.lastError().text();
-        //dbcon->close();
-        return false;
-    }
 }
 
 /**

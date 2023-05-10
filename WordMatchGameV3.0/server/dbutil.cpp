@@ -1,11 +1,12 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 10:54:43
- * @LastEditTime: 2023-05-10 13:21:39
+ * @LastEditTime: 2023-05-10 23:57:05
  * @Description: 
  */
 
 #include "dbutil.h"
+#include <QTime>
 
 dbUtil::dbUtil()
 {
@@ -246,3 +247,67 @@ QString dbUtil::allSortByRank(int type)
        res+= query.value(0).toString() +' '+ query.value(2).toString()+' '+ query.value(3).toString() +' '+ query.value(4).toString()+'\n';
     return res;
 }             
+
+void dbUtil::playerInfoUpdate(int exp,int rank,int passNum,QString name)
+{
+    QSqlQuery query(dbconn);
+    /*update tester's info in database*/
+    query.prepare("update player set exp = ?, ranker = ?, passNum = ? where uname = ? ");
+    query.bindValue(0, exp);
+    query.bindValue(1, rank);
+    query.bindValue(2, passNum);
+    query.bindValue(3, name);
+    query.exec();
+    query.finish();
+}
+
+QString dbUtil::getSignalGameWord(int rank)
+{   
+    /*in this page,new words will not be add.As a result, we can get all word in word bank.*/
+    dbUtil* dbcon=new dbUtil();
+    QSqlQuery query;
+    QString sql="select * from vocabulary where difficulty <=";
+    sql+=QString::number(rank);
+    query.exec(sql);
+    /*get the size of result set*/
+    int rowCount = query.size();
+    /*get a random number*/
+    qsrand(QTime::currentTime().msec());
+    int index=(qrand()%rowCount);
+    qDebug() << "Random number:" << index;
+    /*using a random number, return a word*/
+    if (query.seek(index)) 
+    {
+        QString res = query.value(0).toString();
+        QString difficuly = query.value(1).toString();
+        qDebug() << "The row is:" << res << difficuly;
+        return res;
+    } 
+    else 
+        qDebug() << "Failed to seek the row";
+}
+
+QString dbUtil::playerRegiste(QString uname,QString pwd)
+{
+    QSqlQuery query(dbconn);
+    query.prepare("insert into player(uname,pwd,exp,ranker,passNum,isOnline) values(?,?,0,0,0,1)");
+    query.bindValue(0, uname);
+    query.bindValue(1, pwd);
+    if(query.exec())
+        return "1 "+uname+" "+pwd;
+    else
+        return "0 ";
+    QString res="";
+}
+QString dbUtil::testerRegiste(QString uname,QString pwd)
+{
+    QSqlQuery query(dbconn);
+    query.prepare("insert into tester(uname,pwd,exp,ranker,quesCreatedNum,isOnline) values(?,?,0,0,0,1)");
+    query.bindValue(0, uname);
+    query.bindValue(1, pwd);
+    if(query.exec())
+        return "1 "+uname+" "+pwd;
+    else
+        return "0 ";
+    QString res="";
+}
