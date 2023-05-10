@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 10:54:43
- * @LastEditTime: 2023-05-10 00:08:38
+ * @LastEditTime: 2023-05-10 13:21:39
  * @Description: 
  */
 
@@ -137,3 +137,112 @@ void dbUtil::testerInfoUpdate(int exp,int rank,int quesCreatedNum,QString name)
     query.exec();
     query.finish();
 }
+
+QString dbUtil::allPlayerInfo()
+{
+    QSqlQuery query(dbconn);
+    QString res="";
+    query.exec("select * from player");
+    while(query.next())
+       res+= query.value(0).toString() +' '+ query.value(2).toString()+' '+ query.value(3).toString() +' '+ query.value(4).toString()+'\n';
+    return res;
+}   
+
+QString dbUtil::allTesterInfo()
+{
+    QSqlQuery query(dbconn);
+    QString res="";
+    query.exec("select * from tester");
+    while(query.next())
+       res+= query.value(0).toString() +' '+ query.value(2).toString()+' '+ query.value(3).toString() +' '+ query.value(4).toString()+'\n';
+    return res;
+}
+
+QString dbUtil::allSearchUname(int type,QString uname)
+{
+    QSqlQuery query(dbconn);
+    QString res="";
+    if(type==0)
+    {
+        query.prepare("select * from player where uname = ? ");
+        query.bindValue(0, uname);
+        query.exec();
+    }
+    else if(type==1)
+    {
+        query.prepare("select * from tester where uname = ? ");
+        query.bindValue(0, uname);
+        query.exec();
+    }
+    while(query.next())
+       res+= query.value(0).toString() +' '+ query.value(2).toString()+' '+ query.value(3).toString() +' '+ query.value(4).toString()+'\n';
+    return res;
+}
+
+QString dbUtil::allSearchNum(int type,int number)
+{
+    QSqlQuery query(dbconn);
+    QString res="";
+    if(type==0)
+    {
+        query.prepare("select * from player where passNum = ? ");
+        query.bindValue(0, number);
+        query.exec();
+    }
+    else if(type==1)
+    {
+        query.prepare("select * from tester where quesCreatedNum = ? ");
+        query.bindValue(0, number);
+        query.exec();
+    }
+    while(query.next())
+       res+= query.value(0).toString() +' '+ query.value(2).toString()+' '+ query.value(3).toString() +' '+ query.value(4).toString()+'\n';
+    return res;
+}
+
+QString dbUtil::allSearchRank(int type,int rank)
+{
+    QSqlQuery query(dbconn);
+    QString res="";
+    if(type==0)
+    {
+        query.prepare("select * from player where ranker = ? ");
+        query.bindValue(0, rank);
+        query.exec();
+    }
+    else if(type==1)
+    {
+        query.prepare("select * from tester where ranker = ? ");
+        query.bindValue(0, rank);
+        query.exec();
+    }
+    while(query.next())
+       res+= query.value(0).toString() +' '+ query.value(2).toString()+' '+ query.value(3).toString() +' '+ query.value(4).toString()+'\n';
+    return res;
+}
+
+QString dbUtil::allSortByNum(int type)
+{   
+    QSqlQuery query(dbconn);
+    QString res;
+    if(type==0)
+        query.exec("select * from player order by passNum desc");
+    else if(type==1)
+        query.exec("select * from tester order by quesCreatedNum desc");
+    while(query.next())
+       res+= query.value(0).toString() +' '+ query.value(2).toString()+' '+ query.value(3).toString() +' '+ query.value(4).toString()+'\n';
+    return res;
+}   
+
+QString dbUtil::allSortByRank(int type)
+{
+    QSqlQuery query(dbconn);
+    QString res;
+    if(type==0)
+        query.exec("select * from player order by ranker desc,exp desc");
+    else if(type==1)
+        query.exec("select * from tester order by ranker desc,exp desc");
+    while(query.next())
+       res+= query.value(0).toString() +' '+ query.value(2).toString()+' '+ query.value(3).toString() +' '+ query.value(4).toString()+'\n';
+    return res;
+}             

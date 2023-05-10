@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-08 21:59:27
- * @LastEditTime: 2023-05-10 00:10:18
+ * @LastEditTime: 2023-05-10 00:11:39
  * @Description: 
  */
 #include "mysocket.h"
@@ -81,6 +81,7 @@ void MySocket::slot_update(QString msg, qintptr descriptor)
     /*cope with tester logout*/
     else if(info.at(0)=="testerQuit")
         dbcon->testerLogout(info.at(1));
+    
     delete(dbcon);
     QSqlDatabase::removeDatabase("qt_sql_default_connection");
 }

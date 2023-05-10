@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 10:54:43
- * @LastEditTime: 2023-05-09 22:57:23
+ * @LastEditTime: 2023-05-10 12:43:02
  * @Description: Provide initialize and execute sql methods for database.
  */
 
@@ -28,6 +28,13 @@ class dbUtil : public QObject
         /*public method*/
         QString playerLogin(QString uname,QString pwd);
         QString testerLogin(QString uname,QString pwd);
+        QString allPlayerInfo();        //get all player info
+        QString allTesterInfo();        //get all tester info
+        QString allSearchUname(int type,QString uname); //according to username and usertype
+        QString allSearchNum(int type,int number);      //according to passNum or questionCreatedNum and usertype
+        QString allSearchRank(int type,int rank);       //according to rank and usertype
+        QString allSortByNum(int type);                 //according usertype
+        QString allSortByRank(int type);                //according usertype
         void playerLogout(QString uname);
         void testerLogout(QString uname);
         bool addWord(QString word,int difficult);

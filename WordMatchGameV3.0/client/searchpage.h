@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 15:39:50
- * @LastEditTime: 2023-05-04 14:17:12
+ * @LastEditTime: 2023-05-10 12:09:11
  * @Description: player and tester have a same page
  */
 #ifndef SEARCHPAGE_H
@@ -25,15 +25,32 @@ public:
     explicit searchPage(int type,QTcpSocket* m_tcp,Player* player = nullptr ,Tester* tester = nullptr ,QWidget *parent = nullptr);
     ~searchPage();
 
+signals:
+    void playerInfo(QString msg);
+    void testerInfo(QString msg);
+    void searchInfo(QString msg);
+    void SortByNumInfo(QString msg);
+    void SortByRankInfo(QString msg);
+
 private:
     Ui::searchPage *ui;
     bool isPlayer;  //true--player  false--tester
+    QTcpSocket* tcp;
     /*private method*/
-    void setPlayerTable();
-    void setTesterTable();
-    void searchInfo();
-    void sortByNum();
-    void sortByRank();
+    //send tcp request
+    void sendSearchInfo();
+    void sendPlayerInfo();
+    void sendTesterInfo();
+    void sendSortByNum();
+    void sendSortByRank();
+    //send signal
+    void sendSignal(QString msg);
+    //receive tcp messages
+    void setSearchInfo(QString msg);
+    void setPlayerInfo(QString msg);
+    void setTesterInfo(QString msg);
+    void setSortByNum(QString msg);
+    void setSortByRank(QString msg);
 };
 
 #endif // SEARCHPAGE_H
