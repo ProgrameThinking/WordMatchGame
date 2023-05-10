@@ -18,7 +18,7 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QTableView>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -27,22 +27,22 @@ QT_BEGIN_NAMESPACE
 class Ui_searchPage
 {
 public:
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout;
+    QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *playerButton;
     QSpacerItem *horizontalSpacer;
     QPushButton *testerbutton;
     QSpacerItem *horizontalSpacer_3;
     QSpacerItem *verticalSpacer;
-    QHBoxLayout *horizontalLayout_3;
+    QHBoxLayout *horizontalLayout;
     QLabel *label;
     QPushButton *numButton;
     QPushButton *rankButton;
     QSpacerItem *verticalSpacer_2;
-    QTableView *tableView;
-    QHBoxLayout *horizontalLayout_2;
+    QTableWidget *tableWidget;
+    QHBoxLayout *horizontalLayout_3;
     QComboBox *selectCbx;
     QLineEdit *infoEdit;
     QPushButton *searchButton;
@@ -52,118 +52,118 @@ public:
     {
         if (searchPage->objectName().isEmpty())
             searchPage->setObjectName(QString::fromUtf8("searchPage"));
-        searchPage->resize(720, 480);
+        searchPage->resize(675, 478);
         QFont font;
         font.setFamily(QString::fromUtf8("\345\215\216\346\226\207\350\241\214\346\245\267"));
         font.setPointSize(22);
         searchPage->setFont(font);
-        widget = new QWidget(searchPage);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(50, 30, 601, 426));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(searchPage);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(40, 32, 581, 406));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout->addItem(horizontalSpacer_2);
+        horizontalLayout_2->addItem(horizontalSpacer_2);
 
-        playerButton = new QPushButton(widget);
+        playerButton = new QPushButton(layoutWidget);
         playerButton->setObjectName(QString::fromUtf8("playerButton"));
 
-        horizontalLayout->addWidget(playerButton);
+        horizontalLayout_2->addWidget(playerButton);
 
         horizontalSpacer = new QSpacerItem(150, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
-        horizontalLayout->addItem(horizontalSpacer);
+        horizontalLayout_2->addItem(horizontalSpacer);
 
-        testerbutton = new QPushButton(widget);
+        testerbutton = new QPushButton(layoutWidget);
         testerbutton->setObjectName(QString::fromUtf8("testerbutton"));
 
-        horizontalLayout->addWidget(testerbutton);
+        horizontalLayout_2->addWidget(testerbutton);
 
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout->addItem(horizontalSpacer_3);
+        horizontalLayout_2->addItem(horizontalSpacer_3);
 
 
-        verticalLayout->addLayout(horizontalLayout);
+        verticalLayout->addLayout(horizontalLayout_2);
 
         verticalSpacer = new QSpacerItem(20, 17, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout->addItem(verticalSpacer);
 
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        label = new QLabel(widget);
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        label = new QLabel(layoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
         QFont font1;
         font1.setFamily(QString::fromUtf8("\345\215\216\346\226\207\350\241\214\346\245\267"));
         font1.setPointSize(16);
         label->setFont(font1);
 
-        horizontalLayout_3->addWidget(label);
+        horizontalLayout->addWidget(label);
 
-        numButton = new QPushButton(widget);
+        numButton = new QPushButton(layoutWidget);
         numButton->setObjectName(QString::fromUtf8("numButton"));
         numButton->setFont(font1);
 
-        horizontalLayout_3->addWidget(numButton);
+        horizontalLayout->addWidget(numButton);
 
-        rankButton = new QPushButton(widget);
+        rankButton = new QPushButton(layoutWidget);
         rankButton->setObjectName(QString::fromUtf8("rankButton"));
         rankButton->setFont(font1);
 
-        horizontalLayout_3->addWidget(rankButton);
+        horizontalLayout->addWidget(rankButton);
 
 
-        verticalLayout->addLayout(horizontalLayout_3);
+        verticalLayout->addLayout(horizontalLayout);
 
         verticalSpacer_2 = new QSpacerItem(20, 20, QSizePolicy::Minimum, QSizePolicy::Fixed);
 
         verticalLayout->addItem(verticalSpacer_2);
 
-        tableView = new QTableView(widget);
-        tableView->setObjectName(QString::fromUtf8("tableView"));
+        tableWidget = new QTableWidget(layoutWidget);
+        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
         QFont font2;
         font2.setFamily(QString::fromUtf8("Times New Roman"));
         font2.setPointSize(12);
-        tableView->setFont(font2);
+        tableWidget->setFont(font2);
 
-        verticalLayout->addWidget(tableView);
+        verticalLayout->addWidget(tableWidget);
 
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        selectCbx = new QComboBox(widget);
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        selectCbx = new QComboBox(layoutWidget);
         selectCbx->addItem(QString());
         selectCbx->addItem(QString());
         selectCbx->addItem(QString());
         selectCbx->setObjectName(QString::fromUtf8("selectCbx"));
 
-        horizontalLayout_2->addWidget(selectCbx);
+        horizontalLayout_3->addWidget(selectCbx);
 
-        infoEdit = new QLineEdit(widget);
+        infoEdit = new QLineEdit(layoutWidget);
         infoEdit->setObjectName(QString::fromUtf8("infoEdit"));
         QFont font3;
         font3.setFamily(QString::fromUtf8("Times New Roman"));
         font3.setPointSize(22);
         infoEdit->setFont(font3);
 
-        horizontalLayout_2->addWidget(infoEdit);
+        horizontalLayout_3->addWidget(infoEdit);
 
-        searchButton = new QPushButton(widget);
+        searchButton = new QPushButton(layoutWidget);
         searchButton->setObjectName(QString::fromUtf8("searchButton"));
 
-        horizontalLayout_2->addWidget(searchButton);
+        horizontalLayout_3->addWidget(searchButton);
 
-        exitButton = new QPushButton(widget);
+        exitButton = new QPushButton(layoutWidget);
         exitButton->setObjectName(QString::fromUtf8("exitButton"));
 
-        horizontalLayout_2->addWidget(exitButton);
+        horizontalLayout_3->addWidget(exitButton);
 
 
-        verticalLayout->addLayout(horizontalLayout_2);
+        verticalLayout->addLayout(horizontalLayout_3);
 
 
         retranslateUi(searchPage);

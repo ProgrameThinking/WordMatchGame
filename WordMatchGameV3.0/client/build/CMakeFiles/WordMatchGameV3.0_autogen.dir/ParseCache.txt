@@ -549,14 +549,13 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/addwordpage.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h
-D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/playerpage.h
+D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/dbutil.h
  mmc:Q_OBJECT
- mdp:D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/playerpage.h
+ mdp:D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/dbutil.h
  mdp:D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/build/WordMatchGameV3.0_autogen/moc_predefs.h
- mdp:D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/member.h
- mdp:D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/player.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QDebug
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QObject
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QString
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qabstractitemmodel.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qalgorithms.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qarraydata.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qatomic.h
@@ -570,7 +569,6 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/playerpage.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qdatastream.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qdebug.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qflags.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h
@@ -580,12 +578,10 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/playerpage.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qhashfunctions.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qiodevice.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qiterator.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qline.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qlist.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qlocale.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qlogging.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qmap.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qmargins.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qmetatype.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qnamespace.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qnumeric.h
@@ -594,9 +590,7 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/playerpage.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qpair.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qpoint.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qprocessordetection.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qrect.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qrefcount.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qregexp.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h
@@ -604,7 +598,6 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/playerpage.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qshareddata.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qsize.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qstring.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qstringalgorithms.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qstringlist.h
@@ -620,38 +613,17 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/playerpage.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qvector.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qversiontagging.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qbrush.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qcolor.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qcursor.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qfont.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qfontinfo.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qfontmetrics.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qimage.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qkeysequence.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qmatrix.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qpaintdevice.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qpalette.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qpixelformat.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qpixmap.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qpolygon.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qregion.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qrgb.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qrgba64.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qtgui-config.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qtguiglobal.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qtransform.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QTcpSocket
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qabstractsocket.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtcpsocket.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetwork-config.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetworkglobal.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QWidget
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qsizepolicy.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qtwidgets-config.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qwidget.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/QSql
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlDatabase
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlError
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQuery
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQueryModel
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqldatabase.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlerror.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquery.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquerymodel.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsql-config.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h
  mdp:D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h
  mdp:D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/syslimits.h
  mdp:D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/algorithm
@@ -825,13 +797,14 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/playerpage.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h
-D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/dbutil.h
+D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/playerpage.h
  mmc:Q_OBJECT
- mdp:D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/dbutil.h
+ mdp:D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/playerpage.h
  mdp:D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/build/WordMatchGameV3.0_autogen/moc_predefs.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QDebug
+ mdp:D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/member.h
+ mdp:D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/player.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QObject
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qabstractitemmodel.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QString
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qalgorithms.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qarraydata.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qatomic.h
@@ -845,6 +818,7 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/dbutil.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qcontainerfwd.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qcontainertools_impl.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qcontiguouscache.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qdatastream.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qdebug.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qflags.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qgenericatomic.h
@@ -854,10 +828,12 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/dbutil.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qhashfunctions.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qiodevice.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qiterator.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qline.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qlist.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qlocale.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qlogging.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qmap.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qmargins.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qmetatype.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qnamespace.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qnumeric.h
@@ -866,7 +842,9 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/dbutil.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qobjectdefs.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qobjectdefs_impl.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qpair.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qpoint.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qprocessordetection.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qrect.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qrefcount.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qregexp.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qscopedpointer.h
@@ -874,6 +852,7 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/dbutil.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qshareddata.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qsharedpointer.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qsharedpointer_impl.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qsize.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qstring.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qstringalgorithms.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qstringlist.h
@@ -889,17 +868,38 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/dbutil.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qvector.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qversiontagging.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/QSql
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlDatabase
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlError
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQuery
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/QSqlQueryModel
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqldatabase.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlerror.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquery.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/qsqlquerymodel.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsql-config.h
- mdp:D:/Qt/5.15.2/mingw81_64/include/QtSql/qtsqlglobal.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qbrush.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qcolor.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qcursor.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qfont.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qfontinfo.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qfontmetrics.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qimage.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qkeysequence.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qmatrix.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qpaintdevice.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qpalette.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qpixelformat.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qpixmap.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qpolygon.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qregion.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qrgb.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qrgba64.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qtgui-config.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qtguiglobal.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qtransform.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtGui/qwindowdefs_win.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtNetwork/QTcpSocket
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qabstractsocket.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtcpsocket.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetwork-config.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtNetwork/qtnetworkglobal.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtWidgets/QWidget
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qsizepolicy.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qtwidgets-config.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qtwidgetsglobal.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtWidgets/qwidget.h
  mdp:D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/limits.h
  mdp:D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed/syslimits.h
  mdp:D:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/algorithm
@@ -2817,15 +2817,15 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/testerpage.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h
-D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/widget.cpp
- uic:ui_widget.h
 D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/addwordpage.cpp
  uic:ui_addwordpage.h
+D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/widget.cpp
+ uic:ui_widget.h
 D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/dbutil.cpp
-D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/registration.cpp
- uic:ui_registration.h
 D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/gamepage.cpp
  uic:ui_gamepage.h
+D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/registration.cpp
+ uic:ui_registration.h
 D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/main.cpp
 D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/member.cpp
 D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/player.cpp

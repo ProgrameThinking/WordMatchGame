@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 15:39:50
- * @LastEditTime: 2023-05-10 12:09:11
+ * @LastEditTime: 2023-05-10 20:59:10
  * @Description: player and tester have a same page
  */
 #ifndef SEARCHPAGE_H
@@ -44,7 +44,7 @@ private:
     void sendSortByNum();
     void sendSortByRank();
     //send signal
-    void sendSignal(QString msg);
+    void sendSignal();
     //receive tcp messages
     void setSearchInfo(QString msg);
     void setPlayerInfo(QString msg);

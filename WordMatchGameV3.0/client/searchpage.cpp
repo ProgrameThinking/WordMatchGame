@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-08 19:47:23
- * @LastEditTime: 2023-05-10 12:32:22
+ * @LastEditTime: 2023-05-10 21:48:58
  * @Description: player and tester will search all infomation in this page
  */
 #include "searchpage.h"
@@ -22,7 +22,7 @@ searchPage::searchPage(int type,QTcpSocket* m_tcp,Player* player,Tester* tester,
     connect(ui->numButton,&QPushButton::clicked,this,searchPage::sendSortByNum);
     connect(ui->rankButton,&QPushButton::clicked,this,searchPage::sendSortByRank);
     /*accept server info to send suitable signal*/
-    connect(m_tcp, &QTcpSocket::readyRead, this, searchPage::sendSignal);
+    connect(tcp, &QTcpSocket::readyRead, this, searchPage::sendSignal);
     /*deal with different signals*/
     connect(this,searchPage::playerInfo,this,searchPage::setPlayerInfo);
     connect(this,searchPage::testerInfo,this,searchPage::setTesterInfo);
@@ -31,7 +31,7 @@ searchPage::searchPage(int type,QTcpSocket* m_tcp,Player* player,Tester* tester,
     connect(this,searchPage::SortByRankInfo,this,searchPage::setSortByRank);
 
     connect(ui->exitButton,&QPushButton::clicked,[this,m_tcp,type,player,tester](){
-        disconnect(m_tcp, &QTcpSocket::readyRead, this, searchPage::sendSignal);
+        disconnect(tcp, &QTcpSocket::readyRead, this, searchPage::sendSignal);
         if(type==0)
         {
             /*jump to player page*/
@@ -114,11 +114,11 @@ void searchPage::sendSortByRank()
     tcp->write(msg.toUtf8().data());
 }
 
-void searchPage::sendSignal(QString msg)
+void searchPage::sendSignal()
 {
-    QString array = tcp->readAll();
-    qDebug() << "receive searchPage msg:" <<array;
-    QStringList info = array.split('\n');
+    QString msg = tcp->readAll();
+    qDebug() << "receive searchPage msg:" <<msg;
+    QStringList info = msg.split("\n");
     if(info.at(0)=="playerInfo")
         emit playerInfo(msg);
     else if(info.at(0)=="testerInfo")
@@ -133,197 +133,106 @@ void searchPage::sendSignal(QString msg)
 
 void searchPage::setSearchInfo(QString msg)
 {
-
+    if(isPlayer)
+        setPlayerInfo(msg);
+    else
+        setTesterInfo(msg);
 }
 
 void searchPage::setPlayerInfo(QString msg)
 {
+    QStringList strList = msg.split("\n");
+    //remove the first element
+    strList.removeAt(strList.count() - 1);
+    strList.removeFirst();
+    //table appearance
+    ui->tableWidget->setColumnCount(4);
+    ui->tableWidget->setRowCount(strList.count());
+    ui->tableWidget->setWindowTitle("玩家信息");
+    ui->tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//read only
+    ui->tableWidget->setShowGrid(true);
 
-}
+    QStringList header;
+    header <<"玩家"<<"经验"<<"等级"<<"通关数";
+    ui->tableWidget->setHorizontalHeaderLabels(header);
+    
+    /*table infomation show*/
+    int j = 0;
+    for(int i = 0; i < strList.count(); i++)
+    {
+        QString str_row = strList.at(i);
+        QStringList element = str_row.split(" ");//break down each piece of information
+
+        QTableWidgetItem *item_level= new QTableWidgetItem;
+        QTableWidgetItem *item_exp= new QTableWidgetItem;
+        QTableWidgetItem *item_count= new QTableWidgetItem;
+
+        ui->tableWidget->setItem(i,j,new QTableWidgetItem(element.at(0)));j++;
+        //change string to number
+        item_level->setData(Qt::DisplayRole,(element.at(1)).toInt());
+        ui->tableWidget->setItem(i,j,item_level);j++;
+        item_exp->setData(Qt::DisplayRole,(element.at(2)).toInt());
+        ui->tableWidget->setItem(i,j,item_exp);j++;
+        item_count->setData(Qt::DisplayRole,(element.at(3)).toInt());
+        ui->tableWidget->setItem(i,j,item_count);j++;
+        j=0;
+    }
+    ui->tableWidget->show();
+}   
 
 void searchPage::setTesterInfo(QString msg)
 {
+    QStringList strList = msg.split("\n");
+    //remove the first element
+    strList.removeAt(strList.count() - 1);
+    strList.removeFirst();
+    //table appearance
+    ui->tableWidget->setColumnCount(4);
+    ui->tableWidget->setRowCount(strList.count());
+    ui->tableWidget->setWindowTitle("出题者信息");
+    ui->tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//read only
+    ui->tableWidget->setShowGrid(true);
 
+    QStringList header;
+    header <<"出题者"<<"经验"<<"等级"<<"出题数";
+    ui->tableWidget->setHorizontalHeaderLabels(header);
+    
+    //table infomation show
+    int j = 0;
+    for(int i = 0; i < strList.count(); i++)
+    {
+        QString str_row = strList.at(i);
+        QStringList element = str_row.split(" ");//break down each piece of information
+
+        QTableWidgetItem *item_level= new QTableWidgetItem;
+        QTableWidgetItem *item_exp= new QTableWidgetItem;
+        QTableWidgetItem *item_count= new QTableWidgetItem;
+
+        ui->tableWidget->setItem(i,j,new QTableWidgetItem(element.at(0)));j++;
+        //change string to number
+        item_level->setData(Qt::DisplayRole,(element.at(1)).toInt());
+        ui->tableWidget->setItem(i,j,item_level);j++;
+        item_exp->setData(Qt::DisplayRole,(element.at(2)).toInt());
+        ui->tableWidget->setItem(i,j,item_exp);j++;
+        item_count->setData(Qt::DisplayRole,(element.at(3)).toInt());
+        ui->tableWidget->setItem(i,j,item_count);j++;
+        j=0;
+    }
+    ui->tableWidget->show();
 }
 
 void searchPage::setSortByNum(QString msg)
 {
-
+    if(isPlayer)
+        setPlayerInfo(msg);
+    else
+        setTesterInfo(msg);
 }
 
 void searchPage::setSortByRank(QString msg)
 {
-
+    if(isPlayer)
+        setPlayerInfo(msg);
+    else
+        setTesterInfo(msg);
 }
-
-// /**
-//  * @description: when you click player button,this method will show all players' info
-//  * @return {*}
-//  */
-// void searchPage::setPlayerTable()
-// {
-//     //set query model
-//     QSqlQueryModel *model = new QSqlQueryModel();
-//     dbUtil* dbcon=new dbUtil();
-//     QSqlQuery query("select uname,exp,ranker,passnum from player");
-//     model->setQuery(query);
-//     ui->tableView->setModel(model);
-//     model->setHeaderData(0, Qt::Horizontal, tr("用户名"));
-//     model->setHeaderData(1, Qt::Horizontal, tr("经验"));
-//     model->setHeaderData(2, Qt::Horizontal, tr("等级"));
-//     model->setHeaderData(3, Qt::Horizontal, tr("通关数"));
-//     isPlayer=true;
-//     ui->tableView->show();
-//     dbcon->close();
-// }
-// /**
-//  * @description: when you click tester button,this method will show all testers' info
-//  * @return {*}
-//  */
-// void searchPage::setTesterTable()
-// {
-//     //set query model
-//     QSqlQueryModel *model = new QSqlQueryModel();
-//     dbUtil* dbcon=new dbUtil();
-//     QSqlQuery query("select uname,exp,ranker,quesCreatedNum from tester");
-//     model->setQuery(query);
-//     ui->tableView->setModel(model);
-//     model->setHeaderData(0, Qt::Horizontal, tr("用户名"));
-//     model->setHeaderData(1, Qt::Horizontal, tr("经验"));
-//     model->setHeaderData(2, Qt::Horizontal, tr("等级"));
-//     model->setHeaderData(3, Qt::Horizontal, tr("通关数"));
-//     isPlayer=false;
-//     ui->tableView->show();
-//     dbcon->close();
-// }
-// /**
-//  * @description: search input in current table
-//  * @return {*}
-//  */
-// void searchPage::searchInfo()
-// {
-//     dbUtil* dbcon=new dbUtil();
-//     QString sname=ui->selectCbx->currentText();
-//     QString input=ui->infoEdit->text();
-
-//     QString sql="";
-//     if(isPlayer)
-//     {
-//         QSqlQueryModel *model = new QSqlQueryModel();
-//         sql+="select uname,exp,ranker,passnum from player where ";
-//         if(sname=="用户名")
-//             sql+="uname='"+input+"'";
-//         else if(sname=="等级")
-//             sql+="ranker="+input;
-//         else if(sname=="通关/出题数")
-//             sql+="passNum="+input;
-//         qDebug()<<sql;
-//         QSqlQuery query(sql);
-//         model->setQuery(query);
-//         ui->tableView->setModel(model);
-//         model->setHeaderData(0, Qt::Horizontal, tr("用户名"));
-//         model->setHeaderData(1, Qt::Horizontal, tr("经验"));
-//         model->setHeaderData(2, Qt::Horizontal, tr("等级"));
-//         model->setHeaderData(3, Qt::Horizontal, tr("通关数"));
-//         ui->tableView->show();
-//     }
-//     else 
-//     {
-//         QSqlQueryModel *model = new QSqlQueryModel();
-//         sql+="select uname,exp,ranker,quesCreatedNum from tester where ";
-//         if(sname=="用户名")
-//             sql+="uname='"+input+"'";
-//         else if(sname=="等级")
-//             sql+="ranker="+input;
-//         else if(sname=="通关/出题数")
-//             sql+="quesCreatedNum="+input;
-//         qDebug()<<sql;
-//         QSqlQuery query(sql);
-//         model->setQuery(query);
-//         ui->tableView->setModel(model);
-//         model->setHeaderData(0, Qt::Horizontal, tr("用户名"));
-//         model->setHeaderData(1, Qt::Horizontal, tr("经验"));
-//         model->setHeaderData(2, Qt::Horizontal, tr("等级"));
-//         model->setHeaderData(3, Qt::Horizontal, tr("通关数"));
-//         ui->tableView->show();
-//     }
-//     dbcon->close();
-// }
-
-// /**
-//  * @description: 
-//  * @return {*}
-//  */
-// void searchPage::sortByNum()
-// {
-//     dbUtil* dbcon=new dbUtil();
-//     QString sql="";
-//     if(isPlayer)
-//     {
-//         QSqlQueryModel *model = new QSqlQueryModel();
-//         sql+="select uname,exp,ranker,passnum from player order by passNum desc";
-//         qDebug()<<sql;
-//         QSqlQuery query(sql);
-//         model->setQuery(query);
-//         ui->tableView->setModel(model);
-//         model->setHeaderData(0, Qt::Horizontal, tr("用户名"));
-//         model->setHeaderData(1, Qt::Horizontal, tr("经验"));
-//         model->setHeaderData(2, Qt::Horizontal, tr("等级"));
-//         model->setHeaderData(3, Qt::Horizontal, tr("通关数"));
-//         ui->tableView->show();
-//     }
-//     else 
-//     {
-//         QSqlQueryModel *model = new QSqlQueryModel();
-//         sql+="select uname,exp,ranker,quesCreatedNum from tester order by quesCreatedNum desc";
-//         qDebug()<<sql;
-//         QSqlQuery query(sql);
-//         model->setQuery(query);
-//         ui->tableView->setModel(model);
-//         model->setHeaderData(0, Qt::Horizontal, tr("用户名"));
-//         model->setHeaderData(1, Qt::Horizontal, tr("经验"));
-//         model->setHeaderData(2, Qt::Horizontal, tr("等级"));
-//         model->setHeaderData(3, Qt::Horizontal, tr("通关数"));
-//         ui->tableView->show();
-//     }
-//     dbcon->close();
-// }
-
-// /**
-//  * @description: 
-//  * @return {*}
-//  */
-// void searchPage::sortByRank()
-// {
-//     dbUtil* dbcon=new dbUtil();
-//     QString sql="";
-//     if(isPlayer)
-//     {
-//         QSqlQueryModel *model = new QSqlQueryModel();
-//         sql+="select uname,exp,ranker,passnum from player order by ranker desc,exp desc";
-//         qDebug()<<sql;
-//         QSqlQuery query(sql);
-//         model->setQuery(query);
-//         ui->tableView->setModel(model);
-//         model->setHeaderData(0, Qt::Horizontal, tr("用户名"));
-//         model->setHeaderData(1, Qt::Horizontal, tr("经验"));
-//         model->setHeaderData(2, Qt::Horizontal, tr("等级"));
-//         model->setHeaderData(3, Qt::Horizontal, tr("通关数"));
-//         ui->tableView->show();
-//     }
-//     else 
-//     {
-//         QSqlQueryModel *model = new QSqlQueryModel();
-//         sql+="select uname,exp,ranker,quesCreatedNum from tester order by ranker desc,exp desc";
-//         qDebug()<<sql;
-//         QSqlQuery query(sql);
-//         model->setQuery(query);
-//         ui->tableView->setModel(model);
-//         model->setHeaderData(0, Qt::Horizontal, tr("用户名"));
-//         model->setHeaderData(1, Qt::Horizontal, tr("经验"));
-//         model->setHeaderData(2, Qt::Horizontal, tr("等级"));
-//         model->setHeaderData(3, Qt::Horizontal, tr("通关数"));
-//         ui->tableView->show();
-//     }
-//     dbcon->close();
-// }
