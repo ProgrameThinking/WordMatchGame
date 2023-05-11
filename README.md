@@ -1,4 +1,4 @@
-***@author:SakurakojiSaika***  
+***@author:SakurakojiSaika,chatgpt 3.5***  
 ***@Version:Qt version:5.15.2  CMakeVersion:3.25***  
 ***If it's helpful for you, please give me a star***.
 # To the people looking through this project:
