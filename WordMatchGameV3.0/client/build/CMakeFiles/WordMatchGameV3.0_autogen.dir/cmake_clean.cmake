@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/WordMatchGameV3.0_autogen"
   "WordMatchGameV3.0_autogen/include/ui_addwordpage.h"
+  "WordMatchGameV3.0_autogen/include/ui_battlepage.h"
+  "WordMatchGameV3.0_autogen/include/ui_battleselectpage.h"
   "WordMatchGameV3.0_autogen/include/ui_gamepage.h"
   "WordMatchGameV3.0_autogen/include/ui_playerpage.h"
   "WordMatchGameV3.0_autogen/include/ui_registration.h"

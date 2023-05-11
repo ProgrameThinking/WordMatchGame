@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-08 21:59:27
- * @LastEditTime: 2023-05-11 00:00:55
+ * @LastEditTime: 2023-05-11 12:15:12
  * @Description: 
  */
 #include "mysocket.h"
@@ -50,7 +50,7 @@ void MySocket::slot_update(QString msg, qintptr descriptor)
     {
         QString s="playerLoginBack ";
         s+=dbcon->playerLogin(info.at(1),info.at(2));
-        qDebug()<<"send player login msg:"<<s;
+        qDebug()<<"send player login msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     /*cope with tester login*/
@@ -58,7 +58,7 @@ void MySocket::slot_update(QString msg, qintptr descriptor)
     {
         QString s="testerLoginBack ";
         s+=dbcon->testerLogin(info.at(1),info.at(2));
-        qDebug()<<"send tester login msg:"<<s;
+        qDebug()<<"send tester login msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     /*cope with player registe*/
@@ -66,7 +66,7 @@ void MySocket::slot_update(QString msg, qintptr descriptor)
     {
         QString s="playerRegistationRecv ";
         s+=dbcon->playerRegiste(info.at(1),info.at(2));
-        qDebug()<<"send tester login msg:"<<s;
+        qDebug()<<"send tester login msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     /*cope with tester registe*/
@@ -74,7 +74,7 @@ void MySocket::slot_update(QString msg, qintptr descriptor)
     {
         QString s="testerRegistationRecv ";
         s+=dbcon->testerRegiste(info.at(1),info.at(2));
-        qDebug()<<"send tester login msg:"<<s;
+        qDebug()<<"send tester login msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     /*cope with adding word*/
@@ -85,7 +85,7 @@ void MySocket::slot_update(QString msg, qintptr descriptor)
             s+="1";
         else
             s+="0";
-        qDebug()<<"send add word msg:"<<s;
+        qDebug()<<"send add word msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     /*cope with search page*/
@@ -93,84 +93,84 @@ void MySocket::slot_update(QString msg, qintptr descriptor)
     {
         QString s="searchPage\n";
         s+=dbcon->allSearchUname(0,info.at(1));
-        qDebug()<<"send playerUserName msg:"<<s;
+        qDebug()<<"send playerUserName msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     else if(info.at(0)=="playerRank")
     {
         QString s="searchPage\n";
         s+=dbcon->allSearchRank(0,info.at(1).toInt());
-        qDebug()<<"send playerRank msg:"<<s;
+        qDebug()<<"send playerRank msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     else if(info.at(0)=="playerNum")
     {
         QString s="searchPage\n";
         s+=dbcon->allSearchNum(0,info.at(1).toInt());
-        qDebug()<<"send playerNum msg:"<<s;
+        qDebug()<<"send playerNum msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     else if(info.at(0)=="testerUserName")
     {
         QString s="searchPage\n";
         s+=dbcon->allSearchUname(1,info.at(1));
-        qDebug()<<"send testerUserName msg:"<<s;
+        qDebug()<<"send testerUserName msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     else if(info.at(0)=="testerRank")
     {
         QString s="searchPage\n";
         s+=dbcon->allSearchRank(1,info.at(1).toInt());
-        qDebug()<<"send testerRank msg:"<<s;
+        qDebug()<<"send testerRank msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     else if(info.at(0)=="testerNum")
     {
         QString s="searchPage\n";
         s+=dbcon->allSearchNum(1,info.at(1).toInt());
-        qDebug()<<"send playerNum msg:"<<s;
+        qDebug()<<"send playerNum msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     else if(info.at(0)=="allPlayerInfo")
     {
         QString s="playerInfo\n";
         s+=dbcon->allPlayerInfo();
-        qDebug()<<"send playerNum msg:"<<s;
+        qDebug()<<"send playerNum msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     else if(info.at(0)=="allTesterInfo")
     {
         QString s="testerInfo\n";
         s+=dbcon->allTesterInfo();
-        qDebug()<<"send playerNum msg:"<<s;
+        qDebug()<<"send playerNum msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     else if(info.at(0)=="playerSortByNum")
     {
         QString s="sortByNum\n";
         s+=dbcon->allSortByNum(0);
-        qDebug()<<"send playerNum msg:"<<s;
+        qDebug()<<"send playerNum msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     else if(info.at(0)=="testerSortByNum")
     {
         QString s="sortByNum\n";
         s+=dbcon->allSortByNum(1);
-        qDebug()<<"send playerNum msg:"<<s;
+        qDebug()<<"send playerNum msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     else if(info.at(0)=="playerSortByRank")
     {
         QString s="sortByRank\n";
         s+=dbcon->allSortByRank(0);
-        qDebug()<<"send playerNum msg:"<<s;
+        qDebug()<<"send playerNum msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     else if(info.at(0)=="testerSortByRank")
     {
         QString s="sortByRank\n";
         s+=dbcon->allSortByRank(1);
-        qDebug()<<"send playerNum msg:"<<s;
+        qDebug()<<"send playerNum msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     /*finish coping with search page*/
@@ -178,7 +178,14 @@ void MySocket::slot_update(QString msg, qintptr descriptor)
     {
         QString s="singalGameWordRecv ";
         s+=dbcon->getSignalGameWord(info.at(1).toInt());
-        qDebug()<<"send singalGameWord msg:"<<s;
+        qDebug()<<"send singalGameWord msg:"<<s<<"  My thread:"<<QThread::currentThread();
+        this->write(s.toUtf8().data());
+    }
+    else if(info.at(0)=="playerOnline")
+    {
+        QString s="playerOnlineRecv\n";
+        s+=dbcon->allPlayerOnline(info.at(1));
+        qDebug()<<"send singalGameWord msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     /*cope with tester info's update*/

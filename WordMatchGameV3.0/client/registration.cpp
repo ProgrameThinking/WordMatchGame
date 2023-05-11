@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 12:10:01
- * @LastEditTime: 2023-05-11 00:01:18
+ * @LastEditTime: 2023-05-11 13:49:59
  * @Description: users' registation
  */
 #include "registration.h"
@@ -19,41 +19,6 @@ registration::registration(QTcpSocket* m_tcp,QWidget *parent) :
     ui->setupUi(this);
     setFixedSize(1080,720);
     tcp=m_tcp;
-    /*implement registration*/
-    // connect(ui->confirmButton,&QPushButton::clicked,[this,m_tcp](){
-    //     QString username=ui->unameText->toPlainText();
-    //     QString pwd=ui->pwdText->toPlainText();
-    //     QString type=ui->typeCbx->currentText();
-    //     Member* temp=new Member(username,pwd);
-    //     /*uname or pwd is empty*/
-    //     if(username.isEmpty()||pwd.isEmpty())
-    //         QMessageBox::warning(this,"注册失败","用户名或密码为空!");
-    //     /*sucessful insertion will jump to logging in page*/
-    //     else
-    //     {
-    //         userRegister(username,pwd,type);
-    //         QMessageBox::information(this, tr("注册成功!"), tr("转入登录后界面!"));
-    //         if(type=="玩家")
-    //         {
-    //             /*jump to player page*/
-    //             Player* player=new Player(username,pwd,0,0,0);
-    //             playerPage *playerPageWidget = new playerPage(player,m_tcp);
-    //             playerPageWidget->show();
-    //             this->close();
-    //         }
-    //         else if(type=="出题者")
-    //         {
-    //             /*jump to tester page*/
-    //             Tester* tester=new Tester(username,pwd,0,0,0);
-    //             testerPage *testerPageWidge=new testerPage(tester,m_tcp);
-    //             testerPageWidge->show();
-    //             this->close();
-    //         }
-    //     }
-    //     /*failed insertion will alart and log error info*/
-    //     else
-    //         QMessageBox::warning(this, tr("注册失败"), tr("用户名重复！"));
-    // });
     /*jump to login page*/
     connect(ui->exitButton,&QPushButton::clicked,[this,m_tcp](){
         disconnect(tcp, &QTcpSocket::readyRead, this, registration::transPage);

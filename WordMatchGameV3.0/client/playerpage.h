@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 15:06:43
- * @LastEditTime: 2023-05-02 22:12:43
+ * @LastEditTime: 2023-05-11 13:54:29
  * @Description: 
  */
 #ifndef PLAYERPAGE_H
@@ -26,6 +26,8 @@ public:
 private:
     Ui::playerPage *ui;
     Player player;
+    QTcpSocket* tcp;
+    void isBattle();
 };
 
 #endif // PLAYERPAGE_H

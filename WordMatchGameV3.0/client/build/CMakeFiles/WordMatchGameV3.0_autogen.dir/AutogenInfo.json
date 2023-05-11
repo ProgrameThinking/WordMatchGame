@@ -88,6 +88,18 @@
 			null
 		],
 		[
+			"D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/battlepage.h",
+			"MU",
+			"EWIEGA46WW/moc_battlepage.cpp",
+			null
+		],
+		[
+			"D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/battleselectpage.h",
+			"MU",
+			"EWIEGA46WW/moc_battleselectpage.cpp",
+			null
+		],
+		[
 			"D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/gamepage.h",
 			"MU",
 			"EWIEGA46WW/moc_gamepage.cpp",
@@ -206,6 +218,16 @@
 	[
 		[
 			"D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/addwordpage.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/battlepage.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/battleselectpage.cpp",
 			"MU",
 			null
 		],

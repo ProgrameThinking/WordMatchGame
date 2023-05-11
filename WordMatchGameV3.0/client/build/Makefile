@@ -189,6 +189,54 @@ addwordpage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\WordMatchGameV3.0.dir\build.make CMakeFiles/WordMatchGameV3.0.dir/addwordpage.cpp.s
 .PHONY : addwordpage.cpp.s
 
+battlepage.obj: battlepage.cpp.obj
+.PHONY : battlepage.obj
+
+# target to build an object file
+battlepage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\WordMatchGameV3.0.dir\build.make CMakeFiles/WordMatchGameV3.0.dir/battlepage.cpp.obj
+.PHONY : battlepage.cpp.obj
+
+battlepage.i: battlepage.cpp.i
+.PHONY : battlepage.i
+
+# target to preprocess a source file
+battlepage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\WordMatchGameV3.0.dir\build.make CMakeFiles/WordMatchGameV3.0.dir/battlepage.cpp.i
+.PHONY : battlepage.cpp.i
+
+battlepage.s: battlepage.cpp.s
+.PHONY : battlepage.s
+
+# target to generate assembly for a file
+battlepage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\WordMatchGameV3.0.dir\build.make CMakeFiles/WordMatchGameV3.0.dir/battlepage.cpp.s
+.PHONY : battlepage.cpp.s
+
+battleselectpage.obj: battleselectpage.cpp.obj
+.PHONY : battleselectpage.obj
+
+# target to build an object file
+battleselectpage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\WordMatchGameV3.0.dir\build.make CMakeFiles/WordMatchGameV3.0.dir/battleselectpage.cpp.obj
+.PHONY : battleselectpage.cpp.obj
+
+battleselectpage.i: battleselectpage.cpp.i
+.PHONY : battleselectpage.i
+
+# target to preprocess a source file
+battleselectpage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\WordMatchGameV3.0.dir\build.make CMakeFiles/WordMatchGameV3.0.dir/battleselectpage.cpp.i
+.PHONY : battleselectpage.cpp.i
+
+battleselectpage.s: battleselectpage.cpp.s
+.PHONY : battleselectpage.s
+
+# target to generate assembly for a file
+battleselectpage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\WordMatchGameV3.0.dir\build.make CMakeFiles/WordMatchGameV3.0.dir/battleselectpage.cpp.s
+.PHONY : battleselectpage.cpp.s
+
 gamepage.obj: gamepage.cpp.obj
 .PHONY : gamepage.obj
 
@@ -445,6 +493,12 @@ help:
 	@echo ... addwordpage.obj
 	@echo ... addwordpage.i
 	@echo ... addwordpage.s
+	@echo ... battlepage.obj
+	@echo ... battlepage.i
+	@echo ... battlepage.s
+	@echo ... battleselectpage.obj
+	@echo ... battleselectpage.i
+	@echo ... battleselectpage.s
 	@echo ... gamepage.obj
 	@echo ... gamepage.i
 	@echo ... gamepage.s

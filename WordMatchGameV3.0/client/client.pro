@@ -25,6 +25,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     addwordpage.cpp \
+    battlepage.cpp \
+    battleselectpage.cpp \
     gamepage.cpp \
         main.cpp \
     playerpage.cpp \
@@ -38,6 +40,8 @@ SOURCES += \
 
 HEADERS += \
     addwordpage.h \
+    battlepage.h \
+    battleselectpage.h \
     gamepage.h \
     playerpage.h \
     registration.h \
@@ -50,6 +54,8 @@ HEADERS += \
 
 FORMS += \
         addwordpage.ui \
+        battlepage.ui \
+        battleselectpage.ui \
         gamepage.ui \
         playerpage.ui \
         registration.ui \

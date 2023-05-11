@@ -37,6 +37,7 @@ class dbUtil : public QObject
         QString allSearchRank(int type,int rank);       //according to rank and usertype
         QString allSortByNum(int type);                 //according usertype
         QString allSortByRank(int type);                //according usertype
+        QString allPlayerOnline(QString uname);
         void playerLogout(QString uname);
         void testerLogout(QString uname);
         bool addWord(QString word,int difficult);

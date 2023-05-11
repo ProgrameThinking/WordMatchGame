@@ -18,7 +18,8 @@
         "utility": "cpp",
         "variant": "cpp",
         "istream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "algorithm": "cpp"
     },
     "fileheader.customMade": {
         "Author": "SakurakojiSaika", // 改成你的名字

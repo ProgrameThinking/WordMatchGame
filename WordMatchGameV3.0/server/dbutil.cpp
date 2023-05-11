@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 10:54:43
- * @LastEditTime: 2023-05-10 23:57:05
+ * @LastEditTime: 2023-05-11 12:32:16
  * @Description: 
  */
 
@@ -310,4 +310,17 @@ QString dbUtil::testerRegiste(QString uname,QString pwd)
     else
         return "0 ";
     QString res="";
+}
+
+QString dbUtil::allPlayerOnline(QString uname)
+{
+    QSqlQuery query(dbconn);
+    QString res;
+    query.prepare("select * from player where isOnline=1 and uname != ? ");
+    query.bindValue(0, uname);
+    query.exec();
+    while(query.next())
+       res+= query.value(0).toString() +' '+ query.value(2).toString()+' '+ query.value(3).toString() +' '+ query.value(4).toString()+'\n';
+    qDebug()<<query.lastQuery();
+    return res;
 }
