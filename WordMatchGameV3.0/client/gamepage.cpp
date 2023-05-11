@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 16:14:41
- * @LastEditTime: 2023-05-10 23:23:56
+ * @LastEditTime: 2023-05-11 09:43:19
  * @Description: In this version,player has a unlimited time to spell word.
  */
 #include "gamepage.h"
@@ -113,7 +113,7 @@ int gamePage::rankNum()
         return (nowRank-1);
     else if(nowRank%2==0)
         return nowRank;
-    else
+    else if(nowRank==1)
         return 1;
 }
 
@@ -129,12 +129,6 @@ void gamePage::submit()
         finishedWord++;
         player.addExp(player.calExp(word.length()));
         player.setPassNum(player.getPassNum()+1);
-        /*update player's info*/
-        ui->username->setText(player.getName());
-        ui->ranklevel->setText(QString::number(nowRank));
-        ui->expNum->setText(QString::number(player.getExp()));
-        ui->rankNum->setText(QString::number(player.getRank()));
-        ui->passLevel->setText(QString::number(player.getPassNum()));
         /*update now rank*/
         if(finishedWord==rankNum())
         {
@@ -150,12 +144,13 @@ void gamePage::submit()
         finishedWord=0;
         player.setExp(pastExp);
         player.setRank(pastRank);
-        ui->username->setText(player.getName());
-        ui->ranklevel->setText(QString::number(nowRank));
-        ui->expNum->setText(QString::number(player.getExp()));
-        ui->rankNum->setText(QString::number(player.getRank()));
-        ui->passLevel->setText(QString::number(player.getPassNum()));
     }
+    /*update player's info*/
+    ui->username->setText(player.getName());
+    ui->ranklevel->setText(QString::number(nowRank));
+    ui->expNum->setText(QString::number(player.getExp()));
+    ui->rankNum->setText(QString::number(player.getRank()));
+    ui->passLevel->setText(QString::number(player.getPassNum()));
     /*start a new game*/
     initGame();
 }
