@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\WordMatchGameV2.0.dir/objects.a
-D:\Qt\Tools\mingw810_64\bin\ar.exe qc CMakeFiles\WordMatchGameV2.0.dir/objects.a @CMakeFiles\WordMatchGameV2.0.dir\objects1
-D:\Qt\Tools\mingw810_64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\WordMatchGameV2.0.dir/objects.a -Wl,--no-whole-archive -o WordMatchGameV2.0.exe -Wl,--out-implib,libWordMatchGameV2.0.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\WordMatchGameV2.0.dir\linkLibs.rsp
