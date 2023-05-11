@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 10:54:43
- * @LastEditTime: 2023-05-11 12:32:16
+ * @LastEditTime: 2023-05-11 14:19:28
  * @Description: 
  */
 
@@ -296,8 +296,7 @@ QString dbUtil::playerRegiste(QString uname,QString pwd)
     if(query.exec())
         return "1 "+uname+" "+pwd;
     else
-        return "0 ";
-    QString res="";
+        return "0";
 }
 QString dbUtil::testerRegiste(QString uname,QString pwd)
 {
@@ -309,7 +308,6 @@ QString dbUtil::testerRegiste(QString uname,QString pwd)
         return "1 "+uname+" "+pwd;
     else
         return "0 ";
-    QString res="";
 }
 
 QString dbUtil::allPlayerOnline(QString uname)
@@ -321,6 +319,5 @@ QString dbUtil::allPlayerOnline(QString uname)
     query.exec();
     while(query.next())
        res+= query.value(0).toString() +' '+ query.value(2).toString()+' '+ query.value(3).toString() +' '+ query.value(4).toString()+'\n';
-    qDebug()<<query.lastQuery();
     return res;
 }

@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 16:14:41
- * @LastEditTime: 2023-05-10 22:32:14
+ * @LastEditTime: 2023-05-11 16:45:20
  * @Description: 
  */
 #ifndef GAMEPAGE_H
@@ -40,7 +40,6 @@ private:
     
     /*private methods*/
     void initGame();
-    QString selectWord();
     int rankNum();
     void submit();
     void gameStart();

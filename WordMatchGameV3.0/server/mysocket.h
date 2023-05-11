@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-08 21:59:27
- * @LastEditTime: 2023-05-09 23:36:48
+ * @LastEditTime: 2023-05-11 16:16:00
  * @Description: 
  */
 
@@ -24,6 +24,7 @@ public slots:
     void on_connected();
     void slot_update(QString msg, qintptr descriptor);
     void slot_disconnect();
+    Q_INVOKABLE void sendData(QString s);
 signals:
     void update_serve(QString msg,qintptr descriptor);
 };

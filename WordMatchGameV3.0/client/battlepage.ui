@@ -79,7 +79,7 @@
        <widget class="QLabel" name="player1">
         <property name="font">
          <font>
-          <family>华文行楷</family>
+          <family>Times New Roman</family>
           <pointsize>18</pointsize>
          </font>
         </property>
@@ -118,7 +118,7 @@
        <widget class="QLabel" name="player2">
         <property name="font">
          <font>
-          <family>华文行楷</family>
+          <family>Times New Roman</family>
           <pointsize>18</pointsize>
          </font>
         </property>

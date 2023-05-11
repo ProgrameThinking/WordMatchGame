@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-08 21:59:27
- * @LastEditTime: 2023-05-11 12:15:12
+ * @LastEditTime: 2023-05-11 17:52:39
  * @Description: 
  */
 #include "mysocket.h"
@@ -41,6 +41,11 @@ void MySocket::slot_disconnect()
     }
 }
 
+void MySocket::sendData(QString s)
+{
+    write(s.toUtf8().data());
+}
+
 void MySocket::slot_update(QString msg, qintptr descriptor)
 {
     QStringList info = msg.split(' ');
@@ -49,15 +54,24 @@ void MySocket::slot_update(QString msg, qintptr descriptor)
     if(info.at(0)=="playerLogin")
     {
         QString s="playerLoginBack ";
-        s+=dbcon->playerLogin(info.at(1),info.at(2));
+        QString res=dbcon->playerLogin(info.at(1),info.at(2));
+        s+=res;
         qDebug()<<"send player login msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
+        if(res!="0")
+        {
+            mysocketlist.append(this);//add to player list
+            labellist.append(descriptor);
+            gamelist.append(info.at(1));
+            qDebug()<<"Socket number:"<< mysocketlist.count();
+        }
     }
     /*cope with tester login*/
     else if(info.at(0)=="testerLogin")
     {
         QString s="testerLoginBack ";
-        s+=dbcon->testerLogin(info.at(1),info.at(2));
+        QString res=dbcon->testerLogin(info.at(1),info.at(2));
+        s+=res;
         qDebug()<<"send tester login msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
@@ -65,15 +79,24 @@ void MySocket::slot_update(QString msg, qintptr descriptor)
     else if(info.at(0)=="playerRegistation")
     {
         QString s="playerRegistationRecv ";
-        s+=dbcon->playerRegiste(info.at(1),info.at(2));
+        QString res=dbcon->playerRegiste(info.at(1),info.at(2));
+        s+=res;
         qDebug()<<"send tester login msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
+        if(res!="0")
+        {
+            mysocketlist.append(this);//登录成功就加入玩家列表
+            labellist.append(descriptor);
+            gamelist.append(info.at(1));
+            qDebug()<<"Socket number:"<< mysocketlist.count();
+        }
     }
     /*cope with tester registe*/
     else if(info.at(0)=="testerRegistation")
     {
         QString s="testerRegistationRecv ";
-        s+=dbcon->testerRegiste(info.at(1),info.at(2));
+        QString res=dbcon->testerRegiste(info.at(1),info.at(2));
+        s+=res;
         qDebug()<<"send tester login msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
@@ -185,7 +208,7 @@ void MySocket::slot_update(QString msg, qintptr descriptor)
     {
         QString s="playerOnlineRecv\n";
         s+=dbcon->allPlayerOnline(info.at(1));
-        qDebug()<<"send singalGameWord msg:"<<s<<"  My thread:"<<QThread::currentThread();
+        qDebug()<<"send playerOnline msg:"<<s<<"  My thread:"<<QThread::currentThread();
         this->write(s.toUtf8().data());
     }
     /*cope with tester info's update*/
@@ -196,10 +219,103 @@ void MySocket::slot_update(QString msg, qintptr descriptor)
         dbcon->playerInfoUpdate(info.at(2).toInt(),info.at(3).toInt(),info.at(4).toInt(),info.at(1));
     /*cope with player logout*/
     else if(info.at(0)=="playerQuit")
+    {
+        slot_disconnect();  
         dbcon->playerLogout(info.at(1));
+    }
     /*cope with tester logout*/
     else if(info.at(0)=="testerQuit")
         dbcon->testerLogout(info.at(1));
+    /*deal with battle*/
+    else if(info.at(0)=="ballteReady")  //this signal is sent by the challenger
+    {
+        int sig=0;
+        //find challengee
+        for(int i = 0; i < gamelist.count() ; i++)
+        {
+            if(gamelist.at(i) == info.at(2))
+            {
+                sig = i;
+                break;
+            }
+        }
+        MySocket *item_battle = mysocketlist.at(sig);
+        QString msg="ballteReady "+info.at(1)+" "+info.at(2);
+        //item_battle->write(msg.toUtf8().data());
+        QMetaObject::invokeMethod(item_battle, "sendData", Qt::QueuedConnection,Q_ARG(QString,msg));
+        qDebug()<<"send ballteReady msg:"<<msg<<"  My thread:"<<QThread::currentThread();
+    }
+    else if(info.at(0)=="battleStart")  //this signal is sent by the challengee
+    {
+        int sig=0;
+        //find challenger
+        for(int i = 0; i < gamelist.count() ; i++)
+        {
+            if(gamelist.at(i) == info.at(1))
+            {
+                sig = i;
+                break;
+            }
+        }
+        MySocket *item_battle = mysocketlist.at(sig);
+        QString msg="battleStart\n"+info.at(1)+"\n"+info.at(2);
+        QMetaObject::invokeMethod(item_battle, "sendData", Qt::QueuedConnection,Q_ARG(QString,msg));
+        qDebug()<<"send battleStart msg:"<<msg<<"  My thread:"<<QThread::currentThread();
+    }
+    else if(info.at(0)=="battleRefused")    //this signal is sent by the challengee
+    {
+        int sig=0;
+        //find challenger
+        for(int i = 0; i < gamelist.count() ; i++)
+        {
+            if(gamelist.at(i) == info.at(1))
+            {
+                sig = i;
+                break;
+            }
+        }
+        MySocket *item_battle = mysocketlist.at(sig);
+        QString msg="battleRefused\n";
+        //item_battle->write(msg.toUtf8().data());
+        QMetaObject::invokeMethod(item_battle, "sendData", Qt::QueuedConnection,Q_ARG(QString,msg));
+        qDebug()<<"send ballteReady msg:"<<msg<<"  My thread:"<<QThread::currentThread();
+    }
+    else if(info.at(0)=="battleGameWord")
+    {
+        int sig=0;
+        //find challenger
+        for(int i = 0; i < gamelist.count() ; i++)
+        {
+            if(gamelist.at(i) == info.at(2))
+            {
+                sig = i;
+                break;
+            }
+        }
+        MySocket *item_battle = mysocketlist.at(sig);
+        QString s="battleGameWordRecv "+dbcon->getSignalGameWord(3);
+        QMetaObject::invokeMethod(item_battle, "sendData", Qt::QueuedConnection,Q_ARG(QString,s));
+        this->write(s.toUtf8().data());
+        qDebug()<<"send battleGameWord msg:"<<msg<<"  My thread:"<<QThread::currentThread();
+    }
+    else if(info.at(0)=="battleLose")
+    {
+        int sig=0;
+        //find challenger
+        for(int i = 0; i < gamelist.count() ; i++)
+        {
+            if(gamelist.at(i) == info.at(2))
+            {
+                sig = i;
+                break;
+            }
+        }
+        MySocket *item_battle = mysocketlist.at(sig);
+        QString msg="youAreWinner ";
+        QMetaObject::invokeMethod(item_battle, "sendData", Qt::QueuedConnection,Q_ARG(QString,msg));
+        qDebug()<<"send battleLose msg:"<<msg<<"  My thread:"<<QThread::currentThread();
+    }
+    /*end*/
     delete(dbcon);
     QSqlDatabase::removeDatabase("qt_sql_default_connection");
 }

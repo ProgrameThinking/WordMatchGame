@@ -2569,14 +2569,14 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/testerpage.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wchar.h
  mdp:D:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include/wctype.h
-D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/widget.cpp
- uic:ui_widget.h
 D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/addwordpage.cpp
  uic:ui_addwordpage.h
-D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/registration.cpp
- uic:ui_registration.h
+D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/widget.cpp
+ uic:ui_widget.h
 D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/gamepage.cpp
  uic:ui_gamepage.h
+D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/registration.cpp
+ uic:ui_registration.h
 D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/main.cpp
 D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/member.cpp
 D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/player.cpp
@@ -2595,11 +2595,13 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/battlepage.h
  mdp:D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/player.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QObject
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QString
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/QTimer
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qalgorithms.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qarraydata.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qatomic.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qatomic_cxx11.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qbasicatomic.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qbasictimer.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qbytearray.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qbytearraylist.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qchar.h
@@ -2653,6 +2655,7 @@ D:/Downloads/exp/cpp_code/OOP_project/WordMatchGameV3.0/client/battlepage.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qsystemdetection.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qtcore-config.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qtextstream.h
+ mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qtimer.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qtypeinfo.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qvariant.h
  mdp:D:/Qt/5.15.2/mingw81_64/include/QtCore/qvarlengtharray.h

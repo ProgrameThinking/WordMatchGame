@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MySocket_t {
-    QByteArrayData data[9];
-    char stringdata0[87];
+    QByteArrayData data[11];
+    char stringdata0[98];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -40,12 +40,14 @@ QT_MOC_LITERAL(4, 27, 7), // "qintptr"
 QT_MOC_LITERAL(5, 35, 10), // "descriptor"
 QT_MOC_LITERAL(6, 46, 12), // "on_connected"
 QT_MOC_LITERAL(7, 59, 11), // "slot_update"
-QT_MOC_LITERAL(8, 71, 15) // "slot_disconnect"
+QT_MOC_LITERAL(8, 71, 15), // "slot_disconnect"
+QT_MOC_LITERAL(9, 87, 8), // "sendData"
+QT_MOC_LITERAL(10, 96, 1) // "s"
 
     },
     "MySocket\0update_serve\0\0msg\0qintptr\0"
     "descriptor\0on_connected\0slot_update\0"
-    "slot_disconnect"
+    "slot_disconnect\0sendData\0s"
 };
 #undef QT_MOC_LITERAL
 
@@ -55,7 +57,7 @@ static const uint qt_meta_data_MySocket[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -63,12 +65,13 @@ static const uint qt_meta_data_MySocket[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    2,   34,    2, 0x06 /* Public */,
+       1,    2,   39,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       6,    0,   39,    2, 0x0a /* Public */,
-       7,    2,   40,    2, 0x0a /* Public */,
-       8,    0,   45,    2, 0x0a /* Public */,
+       6,    0,   44,    2, 0x0a /* Public */,
+       7,    2,   45,    2, 0x0a /* Public */,
+       8,    0,   50,    2, 0x0a /* Public */,
+       9,    1,   51,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString, 0x80000000 | 4,    3,    5,
@@ -77,6 +80,7 @@ static const uint qt_meta_data_MySocket[] = {
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString, 0x80000000 | 4,    3,    5,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,   10,
 
        0        // eod
 };
@@ -91,6 +95,7 @@ void MySocket::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 1: _t->on_connected(); break;
         case 2: _t->slot_update((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< qintptr(*)>(_a[2]))); break;
         case 3: _t->slot_disconnect(); break;
+        case 4: _t->sendData((*reinterpret_cast< QString(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -134,13 +139,13 @@ int MySocket::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

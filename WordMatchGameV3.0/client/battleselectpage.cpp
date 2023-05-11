@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-11 11:43:18
- * @LastEditTime: 2023-05-11 14:04:10
+ * @LastEditTime: 2023-05-11 17:00:13
  * @Description: select a online player to battle
  */
 #include "battleselectpage.h"
@@ -27,6 +27,7 @@ battleSelectPage::battleSelectPage(Player* playery,QTcpSocket* m_tcp,QWidget *pa
     connect(ui->confirmButton,&QPushButton::clicked,this,readyBattle);
     connect(ui->exitButton,&QPushButton::clicked,[this,m_tcp,playery](){
         /*jump to player page*/
+        disconnect(m_tcp, &QTcpSocket::readyRead, this, battleSelectPage::setSignals);
         playerPage *playerPageWidget = new playerPage(playery,m_tcp);
         playerPageWidget->show();
         this->close();
@@ -35,7 +36,6 @@ battleSelectPage::battleSelectPage(Player* playery,QTcpSocket* m_tcp,QWidget *pa
 
 battleSelectPage::~battleSelectPage()
 {
-    disconnect(tcp, &QTcpSocket::readyRead, this, battleSelectPage::setSignals);
     delete ui;
 }
 
@@ -49,7 +49,10 @@ void battleSelectPage::setSignals()
     else if(strList.at(0)=="battleStart")
         emit battleBeginSignal(msg);
     else if(strList.at(0)=="battleRefused")
+    {
         QMessageBox::warning(this, tr("对战失败"), tr("对方拒绝与你战斗!"));
+        ui->exitButton->setEnabled(true);
+    }
 }
 
 void battleSelectPage::setPlayerInfo(QString msg)
@@ -100,18 +103,24 @@ void battleSelectPage::readyBattle()
 {
     // 获取当前选中的行号
     QModelIndexList selectedRows = ui->tableWidget->selectionModel()->selectedRows();
-    QModelIndex cellIndex = ui->tableWidget->model()->index(selectedRows.at(0).row(), 0);
-    QString value = cellIndex.data().toString()+" ";
-    QString msg="ballteReady "+player->getName()+" "+value;
-    tcp->write(msg.toUtf8().data());
-    ui->exitButton->setDisabled(true);
+    if (selectedRows.isEmpty()) 
+        QMessageBox::warning(this, tr("对战失败"), tr("请选择挑战对手!"));
+    else
+    {
+        QModelIndex cellIndex = ui->tableWidget->model()->index(selectedRows.at(0).row(), 0);
+        QString value = cellIndex.data().toString()+" ";
+        QString msg="ballteReady "+player->getName()+" "+value;
+        tcp->write(msg.toUtf8().data());
+        ui->exitButton->setDisabled(true);
+    }
 }
 
 /*jump to battle page*/
 void battleSelectPage::battleBegin(QString msg)
 {
     QStringList strList = msg.split("\n");
-    battlePage* battlePageWidget=new battlePage(strList.at(2),player,tcp);
+    battlePage* battlePageWidget=new battlePage(1,strList.at(2),player,tcp);
     battlePageWidget->show();
     this->close();
+    disconnect(tcp, &QTcpSocket::readyRead, this, battleSelectPage::setSignals);
 }

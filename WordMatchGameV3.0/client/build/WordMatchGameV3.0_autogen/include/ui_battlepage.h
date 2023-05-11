@@ -102,15 +102,15 @@ public:
 
         player1 = new QLabel(widget);
         player1->setObjectName(QString::fromUtf8("player1"));
-        player1->setFont(font1);
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Times New Roman"));
+        font2.setPointSize(18);
+        player1->setFont(font2);
 
         horizontalLayout_10->addWidget(player1);
 
         label_13 = new QLabel(widget);
         label_13->setObjectName(QString::fromUtf8("label_13"));
-        QFont font2;
-        font2.setFamily(QString::fromUtf8("Times New Roman"));
-        font2.setPointSize(18);
         label_13->setFont(font2);
 
         horizontalLayout_10->addWidget(label_13);
@@ -123,7 +123,7 @@ public:
 
         player2 = new QLabel(widget);
         player2->setObjectName(QString::fromUtf8("player2"));
-        player2->setFont(font1);
+        player2->setFont(font2);
 
         horizontalLayout_10->addWidget(player2);
 
