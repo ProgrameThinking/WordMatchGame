@@ -1,7 +1,7 @@
 /*
  * @Author: SakurakojiSaika
  * @Date: 2023-05-02 16:14:41
- * @LastEditTime: 2023-05-11 09:43:19
+ * @LastEditTime: 2023-05-12 11:23:03
  * @Description: In this version,player has a unlimited time to spell word.
  */
 #include "gamepage.h"
@@ -75,7 +75,7 @@ void gamePage::gameStart()
     if(info.at(0)=="singalGameWordRecv")
         word=info.at(1);
     ui->wordShowLabel->setText(word);
-    int difficuty=(int)((1+(word.length()-3)/2)+0.5);
+    int difficuty=(int)((1.5+(word.length()-3)/2));
     int interval=(difficuty/(1+nowRank*0.2))*1000;
     qDebug()<<interval;
     processBarTimer=new QTimer(this);

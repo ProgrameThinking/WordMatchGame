@@ -32,6 +32,6 @@
 *.app
 
 # folder
-/WordMatchGameV1.0/build
-/WordMatchGameV1.0/.vscode
 /build-server-Desktop_Qt_5_15_2_MinGW_64_bit-Debug
+/server/build
+/client/build
