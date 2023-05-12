@@ -15,4 +15,4 @@ word entered by the player is exactly the same as the word displayed, including 
 * [WordMatchGame V1.0](https://github.com/ProgrameThinking/WordMatchGame/tree/main/WordMatchGameV1.0)
 * [WordMatchGame V2.0](https://github.com/ProgrameThinking/WordMatchGame/tree/main/WordMatchGameV2.0)
 * [WordMatchGame V3.0](https://github.com/ProgrameThinking/WordMatchGame/tree/main/WordMatchGameV3.0)
-* design report
+* [design report](https://github.com/ProgrameThinking/WordMatchGame/blob/main/cpp%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E6%8A%A5%E5%91%8A.pdf)
